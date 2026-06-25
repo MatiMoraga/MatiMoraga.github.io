@@ -1,26 +1,17 @@
 ---
-title: "E-Commerce Platform"
-date: 2024-11-15
-summary: "E-commerce API backend with Stripe payments, inventory management, and real-time webhooks"
+title: "Destilación multicomponente ideal"
+date: 2026-06-28
+summary: "Modelamiento"
 tags: 
-  - Backend
-  - Node.js
-  - API
-  - E-Commerce
-tech_stack:
-  - React
-  - TypeScript
-  - Node.js
-  - Express
-  - PostgreSQL
-  - Stripe
-  - Redis
-  - Docker
+  - Python
+  - Modelamiento
+  - Procesos
+  - Oil & Gas
 featured: true
-status: "Live"
+status: "Completado"
 role: "Lead Developer"
-duration: "4 months"
-team_size: 2
+duration: "1 semana"
+team_size: 1
 highlights:
   - "Handles 10k+ concurrent users"
   - "99.9% uptime SLA"
@@ -28,46 +19,29 @@ highlights:
   - "60% faster page load vs competitors"
 ---
 
-A modern, scalable e-commerce platform built from scratch with performance and user experience as top priorities.
+Se elige el siguiente problema para resolver en Python
 
-## Overview
+## Problema
 
-Built a complete e-commerce solution for a mid-sized retail company looking to expand online. The platform handles everything from product catalog management to payment processing and order fulfillment.
+Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 KPa se alimenta a una torre de destilación en un flujo de 1000 mol/h. La composición global de la alimentación es n-butano ($z_{but}$ = 0.35), n-pentano ($z_{pent}$ = 0.30), n-hexano ($z_{hex}$ = 0.20) y n-heptano ($z_{hept}$ = 0.15). La corriente es destilada de manera de recuperar el 97% del n-pentano en el destilado y el 85% del n-hexano en el producto de cola. Calcule lo siguiente:
 
-## Key Features
++ Flujo y composición de los productos y temperaturas del tope y la base de la columna.
++ Número de etapas a reflujo total y distribución de otros componentes en los productos.
++ Razón mínima de reflujo, número de etapas a 1.2 $R_{mín}$ y localización del plato de alimentación.
 
-### Customer-Facing
-- **Product Catalog** - Dynamic filtering, sorting, and search with instant results
-- **Shopping Cart** - Real-time inventory checking and price calculations
-- **Checkout** - Secure payment processing via Stripe with Apple Pay/Google Pay support
-- **Order Tracking** - Real-time order status updates with email notifications
-- **User Accounts** - Profile management, order history, and saved addresses
+## Resolución
 
-### Admin Dashboard
-- **Inventory Management** - Real-time stock tracking and low-stock alerts
-- **Order Management** - Bulk order processing and fulfillment workflow
-- **Analytics** - Sales dashboards, customer insights, and revenue reporting
-- **Product Management** - Easy product creation with image uploads and variants
+### Método _short cut_ (aproximación de diseño)
+- **Elección de componentes claves** - Resolución de balances de masa e imposición de recuperaciones respecto a clave liviana (n- pentano) y pesada (n- heptano).
+- **Temperaturas del tope y cola** - Estimación mediante punto de burbuja utilizando librería _chemicals_ y _scipy_.
+- **Método FUG** - Cálculo de etapas mínimas por método Fenske, reflujo mínimo por Underwood y número de etapas reales por Gilliland, resolviendo iterativamente con _fsolve_.
+- **PLato de alimentación** - Resolución de ecuación empírica de Kirkbride.
 
-## Technical Highlights
-
-### Performance Optimization
-- Implemented Redis caching reducing database queries by 70%
-- Optimized images with WebP format and lazy loading
-- Server-side rendering for critical pages improving SEO and load times
-- CDN integration for global content delivery
-
-### Scalability
-- Microservices architecture allowing independent scaling
-- Horizontal scaling with load balancing
-- Database read replicas for improved query performance
-- Message queues for async processing (order emails, inventory updates)
-
-### Security
-- JWT authentication with refresh tokens
-- Rate limiting to prevent abuse
-- Input validation and sanitization
-- PCI-compliant payment processing via Stripe
+### Método riguroso MESH
+- **Definición de variables** - Cálculo de flujos y razón de _boil up_ según McCabe-Thiele.
+- **Balance por etapas** - Definición de problema lineal $Ax= b$ con matriz tridiagonal con coeficientes variables en función de la temperatura por etapa.
+- **Resolución de balances** - Resolución con interación de punto fijo sobre el vector de temperatras para encontrar fracciones de molares en los flujos de líquido.
+- **Problema de optimización** - Minimización de función objetivo definida por la suma de los errores cuadráticos entre las recuperaciones deseadas y reales, variando flujo de destilado y razón de reflujo.
 
 ## Architecture
 
@@ -108,43 +82,10 @@ Built a complete e-commerce solution for a mid-sized retail company looking to e
 - **Scale**: Successfully handled Black Friday with 10k concurrent users
 - **Revenue**: Processing over $50k in monthly transactions
 
-## Tech Stack Details
-
-**Frontend**
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- React Query for data fetching
-- React Hook Form for forms
-
-**Backend**
-- Node.js with Express
-- PostgreSQL with Prisma ORM
-- Redis for caching and sessions
-- Bull for job queues
-
-**Infrastructure**
-- Docker containers
-- AWS EC2 for hosting
-- AWS S3 for image storage
-- Cloudflare CDN
-- GitHub Actions for CI/CD
-
-**Payment & Services**
-- Stripe for payments
-- SendGrid for emails
-- Sentry for error tracking
-
 ## Future Improvements
 
-- [ ] Mobile app (React Native)
-- [ ] Multi-language support
-- [ ] Wishlist and product recommendations
-- [ ] Live chat support
-- [ ] Advanced analytics dashboard
-
-## Screenshots
-
-*(Screenshots would go here in production)*
+- [ ] Balances de energía por etapas
+- [ ] Diseño estructural de la columna
 
 ## Lessons Learned
 
