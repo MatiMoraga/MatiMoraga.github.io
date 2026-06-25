@@ -11,8 +11,10 @@ status:
 role: Ingeniero Civil Químico | Ingeniero Civil en Biotecnología
 email: matias.moraga@ug.uchile.cl
 bio: |
-  Full-stack developer with 5+ years of experience building scalable web applications.
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
+  Ingeniero de procesos con experiencia en liderazgo de equipos, docencia universitaria y con formación complementaria 
+  en biotecnología e ingeniería ambiental. Mi principal enfoque es el modelamiento y optimización de procesos 
+  junto a la evaluación de proyectos, con especial interés en la sostenibilidad de las operaciones industriales y los
+  impactos ambientales asociados.
 
 affiliations:
   - name: Tech Corp
@@ -20,14 +22,14 @@ affiliations:
 
 links:
   - icon: at-symbol
-    url: mailto:alex@example.com
+    url: mailto:matias.moraga.pendola@gmail.com
     label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/alexjohnson
+  # - icon: brands/github
+  #   url: https://github.com/alexjohnson
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnson/
-  - icon: brands/x
-    url: https://x.com/alexjohnson
+    url: https://www.linkedin.com/in/matiasmoraga/
+  # - icon: brands/x
+  #   url: https://x.com/alexjohnson
 
 interests:
   - Web Development
