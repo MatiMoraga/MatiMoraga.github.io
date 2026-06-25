@@ -11,17 +11,16 @@ sections:
     id: hero
     content:
       username: me
-      greeting: "Hi, I'm"
+      greeting: "Hola, soy"
       show_status: true
       show_scroll_indicator: true
       typewriter:
         enable: true
-        prefix: "I build"
+        prefix: "Me especializo en"
         strings:
-          - "full-stack web apps"
-          - "scalable APIs"
-          - "beautiful UIs"
-          - "open source tools"
+          - "modelamiento y optimización de procesos"
+          - "diseño de equipos"
+          - "evaluación de proyectos"
         type_speed: 70
         delete_speed: 40
         pause_time: 2500
