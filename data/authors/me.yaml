@@ -16,9 +16,9 @@ bio: |
   junto a la evaluación de proyectos, con especial interés en la sostenibilidad de las operaciones industriales y los
   impactos ambientales asociados.
 
-affiliations:
-  - name: Tech Corp
-    url: https://techcorp.example.com
+# affiliations:
+#   - name: Tech Corp
+#     url: https://techcorp.example.com
 
 links:
   - icon: at-symbol
@@ -37,7 +37,7 @@ interests:
   - Open Source
   - Developer Experience
 
-education:
+educación:
   - degree: B.S. Computer Science
     institution: State University
     start: 2015-09-01
