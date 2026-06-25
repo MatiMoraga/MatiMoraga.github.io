@@ -14,13 +14,6 @@ tech_stack:
   - PostgreSQL
   - WebSockets
   - Tailwind CSS
-links:
-  - type: github
-    url: https://github.com/alexjohnson/taskflow
-    label: Code
-  - type: live
-    url: https://taskflow-demo.example.com
-    label: Demo
 featured: true
 status: "Live"
 role: "Solo Developer"
