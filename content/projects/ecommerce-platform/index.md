@@ -16,13 +16,6 @@ tech_stack:
   - Stripe
   - Redis
   - Docker
-links:
-  - type: github
-    url: https://github.com/alexjohnson/ecommerce-platform
-    label: Code
-  - type: live
-    url: https://shop-demo.example.com
-    label: Demo
 featured: true
 status: "Live"
 role: "Lead Developer"
