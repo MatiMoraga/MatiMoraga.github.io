@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ''
+title: 'Matías Moraga'
 summary: ''
 date: 2026-01-05
 type: landing
@@ -55,12 +55,12 @@ sections:
       buttons:
         - name: All
           tag: '*'
-        - name: Full-Stack
-          tag: Full-Stack
-        - name: Frontend
-          tag: Frontend
-        - name: Backend
-          tag: Backend
+        - name: Oil & Gas
+          tag: Oil & Gas
+        - name: Minería
+          tag: Minería
+        - name: Tratamiento de aguas
+          tag: Tratamiento de aguas
       default_button_index: 0
       # Archive link auto-shown if more projects exist than 'count' above
       # archive:
@@ -85,14 +85,10 @@ sections:
       categories:
         - name: Languages
           items:
-            - name: TypeScript
-              icon: devicon/typescript
-            - name: JavaScript
-              icon: devicon/javascript
+            - name: MATLAB
+              icon: devicon/matlab
             - name: Python
               icon: devicon/python
-            - name: Go
-              icon: devicon/go
         - name: Frontend
           items:
             - name: React
@@ -103,26 +99,18 @@ sections:
               icon: devicon/tailwindcss
             - name: Alpine.js
               icon: devicon/alpinejs
-        - name: Backend
+        - name: Softwares
           items:
-            - name: Node.js
-              icon: devicon/nodejs
-            - name: Express
-              icon: devicon/express
-            - name: PostgreSQL
-              icon: devicon/postgresql
-            - name: Redis
-              icon: devicon/redis
-        - name: DevOps
+            - name: Excel
+              icon: devicon/excel
+            - name: PowerBI
+              icon: devicon/powerbi
+        - name: Simualdores
           items:
-            - name: Docker
-              icon: devicon/docker
-            - name: AWS
-              icon: devicon/amazonwebservices
-            - name: GitHub Actions
-              icon: brands/github
-            - name: Vercel
-              icon: devicon/vercel
+            - name: Aspen Hysys
+              icon: devicon/aspen
+            - name: DWSIM
+              icon: devicon/dwsim
     design:
       style: grid
       show_levels: false
