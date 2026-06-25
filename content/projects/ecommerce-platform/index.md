@@ -1,6 +1,6 @@
 ---
 title: "Destilación multicomponente ideal"
-date: 2026-06-28
+date: 2026-06-18
 summary: "Modelamiento"
 tags: 
   - Python
