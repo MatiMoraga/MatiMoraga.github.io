@@ -3,6 +3,9 @@ title: "Destilación multicomponente ideal"
 date: 2026-06-18
 summary: "Modelamiento"
 tags: 
+  - Modelamiento
+  - Oil & Gas
+tech_stack:
   - Python
   - Modelamiento
   - Procesos
