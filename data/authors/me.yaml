@@ -2,14 +2,14 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Alex Johnson
-  given: Alex
-  family: Johnson
+  display: Matías Moraga Péndola
+  given: Matías
+  family: Moraga Péndola
 postnominals: []
 status:
   icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: Full-Stack Developer
-email: alex@example.com
+role: Ingeniero Civil Químico | Ingeniero Civil en Biotecnología
+email: matias.moraga@ug.uchile.cl
 bio: |
   Full-stack developer with 5+ years of experience building scalable web applications.
   Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
