@@ -14,13 +14,6 @@ tech_stack:
   - Mapbox
   - Tailwind CSS
   - Vite
-links:
-  - type: github
-    url: https://github.com/alexjohnson/weather-now
-    label: Code
-  - type: live
-    url: https://weathernow-demo.netlify.app
-    label: Demo
 featured: false
 status: "Live"
 role: "Solo Developer"
