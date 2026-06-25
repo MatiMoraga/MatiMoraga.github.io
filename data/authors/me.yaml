@@ -1,5 +1,5 @@
 schema: hugoblox/author/v1
-slug: me
+slug: me.JPG
 is_owner: true
 name:
   display: Matías Moraga Péndola
@@ -50,29 +50,29 @@ educación:
       url: https://github.com/alexjohnson/senior-project
       icon: brands/github
 
-experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
-    start: 2023-01-01
-    summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
-    org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
-    summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
-    summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+# experience:
+#   - role: Senior Software Engineer
+#     org: Tech Corp
+#     start: 2023-01-01
+#     summary: |
+#       Lead development of microservices architecture serving 1M+ users.
+#       Improved API response time by 40% through optimization.
+#       Mentored team of 5 junior developers.
+#   - role: Full-Stack Developer
+#     org: Startup Inc
+#     start: 2021-06-01
+#     end: 2022-12-31
+#     summary: |
+#       Built and deployed 3 production applications from scratch.
+#       Implemented CI/CD pipeline reducing deployment time by 60%.
+#       Led migration from monolith to microservices architecture.
+#   - role: Junior Developer
+#     org: Web Agency
+#     start: 2020-01-01
+#     end: 2021-05-31
+#     summary: |
+#       Developed client websites using React and modern web technologies.
+#       Participated in code reviews and agile ceremonies.
 
 skills:
   - name: Development
