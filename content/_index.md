@@ -25,10 +25,10 @@ sections:
         delete_speed: 40
         pause_time: 2500
       cta_buttons:
-        - text: View My Work
+        - text: Ver mi trabajo
           url: "#projects"
           icon: arrow-down
-        - text: Get In Touch
+        - text: Contáctame
           url: "#contact"
           icon: envelope
     design:
@@ -46,8 +46,8 @@ sections:
   - block: portfolio
     id: projects
     content:
-      title: "Featured Projects"
-      subtitle: "A selection of my recent work"
+      title: "Proyectos personales"
+      subtitle: "Una selección de mis proyectos más recientes"
       count: 0
       filters:
         folders:
@@ -80,25 +80,15 @@ sections:
   - block: tech-stack
     id: skills
     content:
-      title: "Tech Stack"
-      subtitle: "Technologies I use to build things"
+      title: "Habilidades"
+      subtitle: "Tecnologías y herramientas que ocupo"
       categories:
-        - name: Languages
+        - name: Lenguajes
           items:
             - name: MATLAB
               icon: devicon/matlab
             - name: Python
               icon: devicon/python
-        - name: Frontend
-          items:
-            - name: React
-              icon: devicon/react
-            - name: Next.js
-              icon: devicon/nextjs
-            - name: Tailwind CSS
-              icon: devicon/tailwindcss
-            - name: Alpine.js
-              icon: devicon/alpinejs
         - name: Softwares
           items:
             - name: Excel
@@ -205,7 +195,7 @@ sections:
       text: |-
         I'm always interested in hearing about new projects and opportunities.
         Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
-      email: alex@example.com
+      email: matias.moraga@ug.uchile.cl
       autolink: true
     design:
       columns: '1'
