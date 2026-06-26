@@ -18,7 +18,7 @@ duration: "1 semana"
 team_size: 1
 highlights:
   - "Handles 10k+ concurrent users"
-math= true
+math: true
 ---
 
 Se elige el siguiente problema de modelamiento para resolver en Python. 
