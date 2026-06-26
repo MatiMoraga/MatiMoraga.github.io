@@ -1,7 +1,7 @@
 ---
 title: "Destilación multicomponente ideal"
 date: 2026-06-18
-summary: "Modelamiento de un columna de destilación para separar componentes orgánicos ligeros. Basado en balances de masa y restricciones termodinámicas. Incluye diseño preliminar mediante correlaciones y método _shortcut_"
+summary: "Modelamiento de un columna de destilación para separar componentes orgánicos ligeros. Basado en balances de masa y restricciones termodinámicas. Incluye diseño preliminar mediante correlaciones y método _short-cut_"
 tags: 
   - Modelamiento
   - Oil & Gas
@@ -35,56 +35,52 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 
 ### Método _short cut_ (aproximación de diseño)
 - **Elección de componentes claves** - Resolución de balances de masa e imposición de recuperaciones respecto a clave liviana (n- pentano) y pesada (n- heptano).
-- **Temperaturas del tope y cola** - Estimación mediante punto de burbuja utilizando librería _chemicals_ y _scipy_.
+- **Temperaturas del tope y cola** - Estimación mediante punto de burbuja utilizando librería _thermo.Chemicals_ y _scipy_.
 - **Método FUG** - Cálculo de etapas mínimas por método Fenske, reflujo mínimo por Underwood y número de etapas reales por Gilliland, resolviendo iterativamente con _fsolve_.
-- **PLato de alimentación** - Resolución de ecuación empírica de Kirkbride.
+- **Plato de alimentación** - Resolución de ecuación empírica de Kirkbride.
 
 ### Método riguroso MESH
 - **Definición de variables** - Cálculo de flujos y razón de _boil up_ según McCabe-Thiele.
 - **Balance por etapas** - Definición de problema lineal $Ax= b$ con matriz tridiagonal con coeficientes variables en función de la temperatura por etapa.
-- **Resolución de balances** - Resolución con interación de punto fijo sobre el vector de temperatras para encontrar fracciones de molares en los flujos de líquido.
-- **Problema de optimización** - Minimización de función objetivo definida por la suma de los errores cuadráticos entre las recuperaciones deseadas y reales, variando flujo de destilado y razón de reflujo.
+- **Resolución de balances** - Resolución con interación de punto fijo sobre el vector de temperatras para encontrar fracciones molares en los flujos de líquido.
+- **Problema de optimización** - Minimización de la suma de los errores cuadráticos entre las recuperaciones deseadas y reales, variando flujo de destilado y razón de reflujo. Para cada iteración del optimizador, se actualiza el gradiente de temperaturas iterativamente en un _inner-loop_. 
 
 ## Arquitectura
+---
 
-
+---
 ## Desafíos & Soluciones
 
-### Desafío 1: Selección de variables a optimizar
-**Problema**: El flujo de destilado $D$, la razón de reflujo $R$ y el perfil de temperaturas $(T_1 \dots T_{N})$ definen conjuntamente los coeficientes para la resolución de los balances internos de la columna.
+### Desafío 1: Restricciones lógicas a variables internas
+**Problema**: Para cada etapa, debe cumplirse que la suma de las fracciones molares sea igual a uno y que el vector de temperaturas sea un vector creciente desde el tope hacia la cola.
 
-**Solución**: Se nota que las variables de flujo y razón de reflujo definen el balance global de la torre, mientras que el perfil de temperaturas es dependiente de las recuperaciones en los flujos de salida. Por ello, el destilado y el reflujo se optimizan mientras que las temperaturas por etapas se resuelven ietrativamente en un _inner-loop_ en cada paso del optimizador.
+**Solución**: Las fracciones molares son sumadas y normalizadas en cada iteración, por lo que la convergencia del método de punto fijo asegura la corrección. Además, se verifica la diferencia de temperaturas por etapas luego de terminada la resolución iterativa de los balances. 
 
-### Desafío 2: Restricciones lógicas a variables internas
-**Problema**: Para cada etapa, debe cumplirse que la suma de
+### Desafío 2: Adivinanzas de temperaturas entre pasos del optimizador
+**Problema**: Para cada iteración del optimizador, comenzar de una adivinanza inicial de un vector de temperaturas equiespaciado y fijo ralentiza la convergencia. 
 
-**Solución**: 
+**Solución**: Se implmenta Programación Orientada al Objeto para guardar vectores de temperatura como resultados paricales y entregarlos como adivinanza inicial a la función objetivo. La temperatura es guardado en los Atributos y la función en la Clase del Objeto. 
 
-### Desafío 3: Adivinanzas de temperaturas entre pasos del optimizador
-**Problema**: Para cada iteración del optimizar, comenzar de una adivinanza inicial de un vector de temperaturas equiespaciado y fijo ralentiza la convergencia. 
+### Desafío 3: Elección de método de optimización
+**Problema**: En _minimize_, el método de gradiente SLSQP con restrcciones lineales no asegura la convergencia. De la misma forma, Powell con restricciones de rango tampoco converge a una solución. 
 
-**Solución**: Se implmenta un Programación Orientada al Objeto para guardar vectores de temperatura como resultados parical y entregarlos como adivinanza inicial a la función objetivo. La temperatura es guardado en los Atributos y la función en la Clase del Objeto. 
-
-### Desafío 4: Elección de método de optimización
-**Problema**: Métodos de gradiente como 
-
-**Solución**: Se selecciona
+**Solución**: Se selecciona el optimizador Nelder-Mead sin restricciones sobre las variables y se observa la variación entre pasos del optimizador, cumpliéndose la asignación de valores lógicos (positivos y en rango acotado). 
 
 ## Resultados
 
-- **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el noveno. Método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndsoe un gradiente desde el tope a  hasta el fondo a 
-- **Requerimientos**: Se consigue alcanzar 
-- **Desempeño**: Rutina de optimización encuentra valor óptimo en un periodo aproximado de 12 minutos. 
+- **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el noveno. Método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndsoe un gradiente desde el tope a 72°C  hasta el fondo a 131°C. 
+- **Requerimientos**: Se consigue alcanzar el valor óptimo y ajustar las recuperaciones deseadas bajo la tolerancia _default_. Función objetivo se minimiza al orden e-10. Costo computacional puede reducirse relajando tolerancia. 
+- **Desempeño**: Rutina de optimización encuentra valor óptimo en un periodo aproximado de 12 minutos en un total de 70 iteraciones del optimizador. 
 
-## Future Improvements
+## Mejoras futuras
 
-- [ ] Balances de energía por etapas
-- [ ] Diseño estructural de la columna
+- [ ] Balances de energía por etapas.
+- [ ] Diseño estructural de la columna.
 
 ## Lecciones aprendidas
 
-1. **Testear métodos de optimización**: 
-2. **Programación dinámica**: 
+1. **Testear métodos de optimización**: métodos de optimización son sugeridos en base la naturelaza del problema, sin embargo, debe asegurar la convergencia y replantearse el problema de optimización en caso de no aproximarse al óptimo en un tiempo razonable.
+2. **Programación dinámica**: mejorar rapidez de convergencia manteniendo resultados parciales en iteraciones proximales. 
 
 ---
 
