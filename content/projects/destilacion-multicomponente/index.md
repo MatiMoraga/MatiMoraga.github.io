@@ -1,7 +1,7 @@
 ---
 title: "Destilación multicomponente ideal"
 date: 2026-06-18
-summary: "Modelamiento"
+summary: "Modelamiento de un columna de destilación para separar componentes orgánicos ligeros. Basado en balances de masa y restricciones termodinámicas. Incluye diseño preliminar mediante correlaciones y método _shortcut_"
 tags: 
   - Modelamiento
   - Oil & Gas
@@ -10,6 +10,7 @@ tech_stack:
   - Modelamiento
   - Procesos
   - Oil & Gas
+  - Termodinámica
 featured: true
 status: "Completado"
 role: "Lead Developer"
@@ -17,12 +18,10 @@ duration: "1 semana"
 team_size: 1
 highlights:
   - "Handles 10k+ concurrent users"
-  - "99.9% uptime SLA"
-  - "Processing $50k+ monthly transactions"
-  - "60% faster page load vs competitors"
+math= true
 ---
 
-Se elige el siguiente problema para resolver en Python
+Se elige el siguiente problema de modelamiento para resolver en Python. 
 
 ## Problema
 
@@ -46,59 +45,48 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 - **Resolución de balances** - Resolución con interación de punto fijo sobre el vector de temperatras para encontrar fracciones de molares en los flujos de líquido.
 - **Problema de optimización** - Minimización de función objetivo definida por la suma de los errores cuadráticos entre las recuperaciones deseadas y reales, variando flujo de destilado y razón de reflujo.
 
-## Architecture
+## Arquitectura
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐
-│  React SPA  │────▶│   REST API   │────▶│ PostgreSQL  │
-└─────────────┘     │  (Express)   │     └─────────────┘
-                    └──────┬───────┘
-                           │
-                    ┌──────▼───────┐
-                    │    Redis     │
-                    │   (Cache)    │
-                    └──────────────┘
-```
 
-## Challenges & Solutions
+## Desafíos & Soluciones
 
-### Challenge 1: Inventory Sync
-**Problem**: Multiple users buying same product simultaneously causing overselling
+### Desafío 1: Selección de variables a optimizar
+**Problema**: El flujo de destilado $D$, la razón de reflujo $R$ y el perfil de temperaturas $(T_1 \dots T_{N})$ definen conjuntamente los coeficientes para la resolución de los balances internos de la columna.
 
-**Solution**: Implemented optimistic locking with Redis to ensure inventory accuracy during concurrent purchases
+**Solución**: Se nota que las variables de flujo y razón de reflujo definen el balance global de la torre, mientras que el perfil de temperaturas es dependiente de las recuperaciones en los flujos de salida. Por ello, el destilado y el reflujo se optimizan mientras que las temperaturas por etapas se resuelven ietrativamente en un _inner-loop_ en cada paso del optimizador.
 
-### Challenge 2: Payment Processing
-**Problem**: Handling payment failures gracefully while maintaining order integrity
+### Desafío 2: Restricciones lógicas a variables internas
+**Problema**: Para cada etapa, debe cumplirse que la suma de
 
-**Solution**: Built robust state machine for order processing with automatic retry logic and customer notifications
+**Solución**: 
 
-### Challenge 3: Performance at Scale
-**Problem**: Slow page loads during traffic spikes
+### Desafío 3: Adivinanzas de temperaturas entre pasos del optimizador
+**Problema**: Para cada iteración del optimizar, comenzar de una adivinanza inicial de un vector de temperaturas equiespaciado y fijo ralentiza la convergencia. 
 
-**Solution**: Implemented multi-layer caching strategy (CDN, Redis, in-memory) and database query optimization
+**Solución**: Se implmenta un Programación Orientada al Objeto para guardar vectores de temperatura como resultados parical y entregarlos como adivinanza inicial a la función objetivo. La temperatura es guardado en los Atributos y la función en la Clase del Objeto. 
 
-## Results
+### Desafío 4: Elección de método de optimización
+**Problema**: Métodos de gradiente como 
 
-- **Performance**: 60% faster page load times compared to previous platform
-- **Conversion**: 25% increase in conversion rate due to improved UX
-- **Uptime**: 99.9% uptime over 6 months in production
-- **Scale**: Successfully handled Black Friday with 10k concurrent users
-- **Revenue**: Processing over $50k in monthly transactions
+**Solución**: Se selecciona
+
+## Resultados
+
+- **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el noveno. Método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndsoe un gradiente desde el tope a  hasta el fondo a 
+- **Requerimientos**: Se consigue alcanzar 
+- **Desempeño**: Rutina de optimización encuentra valor óptimo en un periodo aproximado de 12 minutos. 
 
 ## Future Improvements
 
 - [ ] Balances de energía por etapas
 - [ ] Diseño estructural de la columna
 
-## Lessons Learned
+## Lecciones aprendidas
 
-1. **Start with Performance**: Built with performance in mind from day one rather than optimizing later
-2. **Testing Matters**: Comprehensive test suite caught critical bugs before production
-3. **Monitor Everything**: Proper logging and monitoring essential for maintaining uptime
-4. **User Feedback**: Regular user testing revealed UX issues we wouldn't have found otherwise
+1. **Testear métodos de optimización**: 
+2. **Programación dinámica**: 
 
 ---
 
-**Project Status**: ✅ Live in Production  
-**GitHub**: [View Source Code](https://github.com/alexjohnson/ecommerce-platform)  
-**Demo**: [Try it Live](https://shop-demo.example.com)
+**Estado del proyecto**: ✅ Completado
+**GitHub**: [Código Fuente]()  
