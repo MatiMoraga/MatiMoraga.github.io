@@ -44,7 +44,7 @@ sections:
   
   # Filterable Portfolio - Alpine.js powered project filtering
   - block: portfolio
-    id: projects
+    id: Proyectos
     content:
       title: "Proyectos personales"
       subtitle: "Una selección de mis proyectos más recientes"
@@ -78,7 +78,7 @@ sections:
   
   # Visual Tech Stack - Icons organized by category
   - block: tech-stack
-    id: skills
+    id: Habilidades
     content:
       title: "Habilidades"
       subtitle: "Tecnologías y herramientas que ocupo"
@@ -113,7 +113,7 @@ sections:
   
   # Experience Timeline
   - block: resume-experience
-    id: experience
+    id: Experiencia
     content:
       title: Experience
       date_format: Jan 2006
@@ -165,7 +165,7 @@ sections:
   
   # Recent Blog Posts
   - block: collection
-    id: blog
+    id: Blog
     content:
       title: Recent Posts
       subtitle: 'Thoughts on web development, tech, and more'
@@ -188,7 +188,7 @@ sections:
   
   # Contact Section
   - block: contact-info
-    id: contact
+    id: Contacto
     content:
       title: Get In Touch
       subtitle: "Let's build something amazing together"
