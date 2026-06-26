@@ -34,7 +34,7 @@ sections:
     design:
       style: centered
       avatar_shape: circle
-      animations: true
+      animations: false
       background:
         color:
           light: "#fafafa"
