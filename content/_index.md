@@ -164,7 +164,7 @@ sections:
         padding: ["4rem", "0", "4rem", "0"]
   
   # Recent Blog Posts
-  - block: collection
+  # - block: collection
     id: blog
     content:
       title: Recent Posts
