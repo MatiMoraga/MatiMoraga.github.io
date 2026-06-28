@@ -34,8 +34,7 @@ links:
 interests: []
 
 education:
-  - degree: Ingeniería Civil Química
-  - degree: Ingeniería Civil en Biotecnología
+  - degree: Ingeniería Civil Química e Ingeniería Civil en Biotecnología
     institution: Universidad de Chile
     start: 2016-03-07
     end: 2025-06-06
@@ -43,7 +42,7 @@ education:
       + Trabajo de título: elaboración de un modelo matemático en MATLAB para el diseño, simulación y optimización de un proceso de nanofiltración por membranas.
       + Ayudante de Introducción al Cálculo, Química, Operaciones de Transferencia de Calor, Procesos de Separación en Biotecnología, Taller de Diseño de Procesos y Taller de Proyectos.
       + Miembro directivo y deportista seleccionado en equipo competitivo de Cheerleading. 
-      + Mimebro honorario y delegado en Asociación Chilena de Estudiantes de Ingeniería Química. 
+      + Mimebro honorario y delegado en Asociación Chilena de Estudiantes de Ingeniería Química (AChEIQ). 
     # button:
     #   text: View Project
     #   url: https://github.com/alexjohnson/senior-project
