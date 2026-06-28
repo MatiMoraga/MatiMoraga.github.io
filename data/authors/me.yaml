@@ -37,7 +37,7 @@ interests:
   - Open Source
   - Developer Experience
 
-educación:
+education:
   - degree: B.S. Computer Science
     institution: State University
     start: 2015-09-01
@@ -59,20 +59,19 @@ experience:
       minero y energético: cuantificación de huella de carbono, análisis de riesgos, diseño de equipos y simulación de procesos.
       + Proyecto de práctica en estudio y análisis de simulaciones hidráulicas de carga y descarga de combustibles.
       
-  - role: Practicante 
-    org: Startup Inc
-    start: 2019-02-03
-    end: 2022-02-28
+  - role: Practicante de ingeniería
+    org: FPC TISSUE 
+    start: 2020-02-03
+    end: 2020-02-28
     summary: |
       Colaborador en la elaboración de documentos oficiales: "Manual de la Química del Extremo Húmedo".
       
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
+  - role: Practicante de laboratorio
+    org: Energía León
+    start: 2019-02-04
+    end: 2019-03-01
     summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+      Ayudante de laboratorio para la medición de parámetros y análisis de aguas industriales en planta de energía y calderas.
 
 # skills:
 #   - name: Development
