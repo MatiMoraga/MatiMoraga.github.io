@@ -51,21 +51,21 @@ educación:
       icon: brands/github
 
 experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
-    start: 2023-01-01
+  - role: Practicante de ingeniería 
+    org: Green I&C
+    start: 2022-01-03
     summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
+      + Apoyo y revisión de documentación en proyectos de ingeniería de carácter técnico-ambiental para los sectores
+      minero y energético: cuantificación de huella de carbono, análisis de riesgos, diseño de equipos y simulación de procesos.
+      + Proyecto de práctica en estudio y análisis de simulaciones hidráulicas de carga y descarga de combustibles.
+      
+  - role: Practicante 
     org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
+    start: 2019-02-03
+    end: 2022-02-28
     summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
+      Colaborador en la elaboración de documentos oficiales: "Manual de la Química del Extremo Húmedo".
+      
   - role: Junior Developer
     org: Web Agency
     start: 2020-01-01
