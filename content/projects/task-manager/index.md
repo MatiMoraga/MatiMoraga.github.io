@@ -1,5 +1,6 @@
 ---
 title: "TaskFlow - Project Management Tool"
+draft: true
 date: 2024-09-20
 summary: "Real-time collaborative task management application with drag-and-drop Kanban boards and team features"
 tags:
@@ -14,7 +15,7 @@ tech_stack:
   - PostgreSQL
   - WebSockets
   - Tailwind CSS
-featured: false
+featured: true
 status: "Live"
 role: "Solo Developer"
 duration: "2 months"
