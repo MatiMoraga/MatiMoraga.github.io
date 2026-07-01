@@ -115,7 +115,7 @@ sections:
   - block: resume-experience
     id: experience
     content:
-      title: Experience
+      title: Experiencia
       date_format: Jan 2006
       items:
         - title: Senior Software Engineer
@@ -190,12 +190,14 @@ sections:
   - block: contact-info
     id: contact
     content:
-      title: Get In Touch
+      title: Contacto
       subtitle: "Let's build something amazing together"
       text: |-
         I'm always interested in hearing about new projects and opportunities.
         Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
       email: matias.moraga@ug.uchile.cl
+      autolink: true
+      email: matias.moraga.pendola@gmail.com
       autolink: true
     design:
       columns: '1'
@@ -209,13 +211,13 @@ sections:
   # CTA Card
   - block: cta-card
     content:
-      title: "Open to Opportunities"
+      title: "Abierto a nuevas oportunidades"
       text: |-
-        I'm currently looking for **senior engineering** or **tech lead** roles.
+        Actualmente busco oportunidades laborales como **ingeniero de proyectos o ingeniero de procesos** a nivel Trainee o Junior. 
         
         Let's connect and discuss how I can help your team.
       button:
-        text: 'Download Resume'
+        text: 'Descargar curriculum'
         url: uploads/resume.pdf
         new_tab: true
     design:
