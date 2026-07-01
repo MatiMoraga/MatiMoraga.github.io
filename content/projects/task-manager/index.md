@@ -14,7 +14,7 @@ tech_stack:
   - PostgreSQL
   - WebSockets
   - Tailwind CSS
-featured: true
+featured: false
 status: "Live"
 role: "Solo Developer"
 duration: "2 months"
