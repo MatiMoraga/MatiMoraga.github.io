@@ -1,5 +1,6 @@
 ---
 title: "WeatherNow - Real-Time Weather App"
+draft: true
 date: 2024-06-10
 summary: "Beautiful weather application with real-time data, 7-day forecasts, and interactive maps"
 tags:
