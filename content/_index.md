@@ -53,7 +53,7 @@ sections:
         folders:
           - projects
       buttons:
-        - name: All
+        - name: Todos
           tag: '*'
         - name: Oil & Gas
           tag: Oil & Gas
@@ -62,11 +62,6 @@ sections:
         - name: Tratamiento de aguas
           tag: Tratamiento de aguas
       default_button_index: 0
-      # Archive link auto-shown if more projects exist than 'count' above
-      # archive:
-      #   enable: false  # Set to false to explicitly hide
-      #   text: "Browse All"  # Customize text
-      #   link: "/work/"  # Custom URL
     design:
       columns: 3
       background:
@@ -81,7 +76,7 @@ sections:
     id: skills
     content:
       title: "Habilidades"
-      subtitle: "Tecnologías y herramientas que ocupo"
+      subtitle: "Tecnologías y herramientas que uso"
       categories:
         - name: Lenguajes
           items:
@@ -95,7 +90,7 @@ sections:
               icon: devicon/excel
             - name: PowerBI
               icon: devicon/powerbi
-        - name: Simualdores
+        - name: Simuladores
           items:
             - name: Aspen Hysys
               icon: devicon/aspen
@@ -167,8 +162,8 @@ sections:
   # - block: collection
   #   id: blog
   #   content:
-  #     title: Recent Posts
-  #     subtitle: 'Thoughts on web development, tech, and more'
+  #     title: Publicaciones recientes
+  #     subtitle: 'Reflexiones sobre ingeniería, procesos y más'
   #     text: ''
   #     filters:
   #       folders:
@@ -191,12 +186,10 @@ sections:
     id: contact
     content:
       title: Contacto
-      subtitle: "Let's build something amazing together"
+      subtitle: "Trabajemos juntos"
       text: |-
-        I'm always interested in hearing about new projects and opportunities.
-        Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
-      email: matias.moraga@ug.uchile.cl
-      autolink: true
+        Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades.
+        ¡No dudes en escribirme!
       email: matias.moraga.pendola@gmail.com
       autolink: true
     design:
@@ -213,16 +206,15 @@ sections:
     content:
       title: "Abierto a nuevas oportunidades"
       text: |-
-        Actualmente busco oportunidades laborales como **ingeniero de proyectos o ingeniero de procesos** a nivel Trainee o Junior. 
+        Actualmente busco oportunidades laborales como **ingeniero de proyectos o ingeniero de procesos** a nivel Trainee o Junior.
         
-        Let's connect and discuss how I can help your team.
+        Conversemos sobre cómo puedo aportar a tu equipo.
       button:
         text: 'Descargar curriculum'
         url: uploads/resume.pdf
         new_tab: true
     design:
       card:
-        # Light mode: soft pastel theme gradient | Dark mode: rich deep gradient
         css_class: 'bg-gradient-to-br from-primary-200 via-primary-100 to-secondary-200 dark:from-primary-600 dark:via-primary-700 dark:to-secondary-700'
         text_color: dark
       background:
