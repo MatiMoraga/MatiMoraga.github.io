@@ -17,7 +17,7 @@ role: "Desarrollador"
 duration: "1 semana"
 team_size: 1
 highlights:
-  - "Métodos shortcut (FUG) y riguroso MESH implementados"
+  - "Métodos shortcut (FUGK) y riguroso MESH implementados"
 math: true
 ---
 
@@ -36,8 +36,7 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 ### Método _short cut_ (aproximación de diseño)
 - **Elección de componentes claves** - Resolución de balances de masa e imposición de recuperaciones respecto a clave liviana (n-pentano) y pesada (n-heptano).
 - **Temperaturas del tope y cola** - Estimación mediante punto de burbuja utilizando librería _thermo.Chemicals_ y _scipy_.
-- **Método FUG** - Cálculo de etapas mínimas por método Fenske, reflujo mínimo por Underwood y número de etapas reales por Gilliland, resolviendo iterativamente con _fsolve_.
-- **Plato de alimentación** - Resolución de ecuación empírica de Kirkbride.
+- **Método FUGK** - Cálculo de etapas mínimas por método Fenske, reflujo mínimo por Underwood, número de etapas reales por Gilliland y plato de alimentación según ecuación empírica de Kirkbride. Se resuelve iterativamente utilizando _fsolve_. 
 
 ### Método riguroso MESH
 - **Definición de variables** - Cálculo de flujos y razón de _boil up_ según McCabe-Thiele.
@@ -68,15 +67,15 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 
 ## Resultados
 
-- **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el noveno. El método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndose un gradiente desde el tope a 72°C hasta el fondo a 131°C.
+- **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el séptimo. El método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndose un gradiente desde el tope a 72°C hasta el fondo a 131°C.
 - **Requerimientos**: Se consigue alcanzar el valor óptimo y ajustar las recuperaciones deseadas bajo la tolerancia _default_. La función objetivo se minimiza al orden e-10. El costo computacional puede reducirse relajando la tolerancia.
-- **Desempeño**: La rutina de optimización encuentra el valor óptimo en un periodo aproximado de 12 minutos en un total de 70 iteraciones del optimizador.
+- **Desempeño**: La rutina de optimización encuentra el valor óptimo en un periodo aproximado de 14 minutos en un total de 80 iteraciones del optimizador.
 
 ## Mejoras futuras
 
 - [ ] Balances de energía por etapas.
 - [ ] Diseño estructural de la columna.
-- [ ] Comparación con simualdor de procesos. 
+- [ ] Validanción con simualdor de procesos. 
 
 ## Lecciones aprendidas
 
