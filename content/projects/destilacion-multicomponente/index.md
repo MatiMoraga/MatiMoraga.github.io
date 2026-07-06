@@ -90,4 +90,4 @@ A continuación se presentan diagramas y gráficos con los resultados de la simu
 ---
 
 **Estado del proyecto**: ✅ Completado  
-**GitHub**: [Código Fuente]()
+**GitHub**: [Código Fuente](https://github.com/MatiMoraga/proyectos-privados/blob/2dbba4a1a7337c857aff7bbf0f7d1ee107f4433c/multicomponent_distillation.ipynb)
