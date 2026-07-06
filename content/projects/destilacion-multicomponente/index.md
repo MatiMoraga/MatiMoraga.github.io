@@ -67,12 +67,14 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 
 ## Resultados
 
-![Diagrama de la columna de destilación](./columna_destilacion.png)
-![Perfiles de composición en líquido y vapor](./perfiles_composicion.png)
-
 - **Diseño**: Se consigue un diseño preliminar con el método _short cut_ de una columna de 16 platos con alimentación en el séptimo. El método riguroso corrige flujos globales y calcula composiciones y temperaturas por etapas, obteniéndose un gradiente desde el tope a 72°C hasta el fondo a 131°C.
 - **Requerimientos**: Se consigue alcanzar el valor óptimo y ajustar las recuperaciones deseadas bajo la tolerancia _default_. La función objetivo se minimiza al orden e-10. El costo computacional puede reducirse relajando la tolerancia.
 - **Desempeño**: La rutina de optimización encuentra el valor óptimo en un periodo aproximado de 14 minutos en un total de 80 iteraciones del optimizador.
+
+A continuación se presentan diagramas y gráficos con los resultados de la simulación:
+
+![Diagrama de la columna de destilación](./columna_destilacion.png)
+![Perfiles de composición en líquido y vapor](./perfiles_composicion.png)
 
 ## Mejoras futuras
 
