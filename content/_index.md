@@ -59,6 +59,8 @@ sections:
           tag: Oil & Gas
         - name: Minería
           tag: Minería
+        - name: Celulosa y papel
+          tag: Celulosa y papel
         - name: Tratamiento de aguas
           tag: Tratamiento de aguas
       default_button_index: 0
