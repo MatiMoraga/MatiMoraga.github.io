@@ -70,5 +70,5 @@ math: true
 
 ---
 
-**Estado del proyecto**: @status
+**Estado del proyecto**: {{< param "status" >}}
 **GitHub**: [Código Fuente]()
