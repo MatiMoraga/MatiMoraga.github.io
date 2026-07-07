@@ -17,4 +17,4 @@ main:
   #   weight: 40
   - name: Contacto
     url: /#contact
-    weight: 50
+    weight: 40
