@@ -70,5 +70,5 @@ math: true
 
 ---
 
-**Estado del proyecto**: ✅ Completado  
+**Estado del proyecto**: @status
 **GitHub**: [Código Fuente]()
