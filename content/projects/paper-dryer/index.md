@@ -22,7 +22,7 @@ math: true
 ---
 
 ## Problema
-
+Diseñar y optimizar de costos de un secador de papel cilíndrico tipo Yankee utilizado en máquina papelera tissue. Describir fenomenología de transferencia de calor y establecer rutina de diseño en base a balances, correlaciones y ecuaciones de diseño para intercambiadores de calor. 
 
 
 ## Resolución
