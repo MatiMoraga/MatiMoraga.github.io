@@ -33,7 +33,7 @@ De forma simultánea, un flujo de aire seco contacta la superficie externa de la
 
 ## Resolución
 
-- **Establecer criterios de diseño** - 
+- **Establecer criterios de diseño y supuestos** - 
 - **Balances de masa y energía** - 
 - **Búsqueda de correlaciones y parámetros** - 
 - **Rutina de diseño** -
