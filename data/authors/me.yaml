@@ -1,5 +1,5 @@
 schema: hugoblox/author/v1
-slug: me.JPG
+slug: me
 is_owner: true
 name:
   display: Matías Moraga Péndola
@@ -7,7 +7,7 @@ name:
   family: Moraga Péndola
 postnominals: []
 status:
-  icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
+  icon: "⚗️"
 role: Ingeniero Civil Químico | Ingeniero Civil en Biotecnología
 email: matias.moraga@ug.uchile.cl
 bio: |
@@ -16,86 +16,57 @@ bio: |
   junto a la evaluación de proyectos, con especial interés en la sostenibilidad de las operaciones industriales y los
   impactos ambientales asociados.
 
-# affiliations:
-#   - name: Tech Corp
-#     url: https://techcorp.example.com
-
 links:
   - icon: at-symbol
     url: mailto:matias.moraga.pendola@gmail.com
-    label: E-mail Me
-  # - icon: brands/github
-  #   url: https://github.com/alexjohnson
+    label: Envíame un correo
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/matiasmoraga/
-  # - icon: brands/x
-  #   url: https://x.com/alexjohnson
 
 interests: []
 
 education:
-  - degree: Ingeniería Civil Química |
-            Ingeniería Civil en Biotecnología
+  - degree: Ingeniería Civil Química | Ingeniería Civil en Biotecnología
     institution: Universidad de Chile
     start: 2016-03-07
     end: 2025-06-06
     summary: |
       + Trabajo de título: elaboración de un modelo matemático en MATLAB para el diseño, simulación y optimización de un proceso de nanofiltración por membranas.
       + Ayudante de Introducción al Cálculo, Química, Operaciones de Transferencia de Calor, Procesos de Separación en Biotecnología, Taller de Diseño de Procesos y Taller de Proyectos.
-      + Miembro directivo y deportista seleccionado en equipo competitivo de Cheerleading. 
-      + Miembro honorario y delegado en Asociación Chilena de Estudiantes de Ingeniería Química (AChEIQ). 
-    # button:
-    #   text: View Project
-    #   url: https://github.com/alexjohnson/senior-project
-    #   icon: brands/github
+      + Miembro directivo y deportista seleccionado en equipo competitivo de Cheerleading.
+      + Miembro honorario y delegado en Asociación Chilena de Estudiantes de Ingeniería Química (AChEIQ).
 
 experience:
-  - role: Practicante de ingeniería 
+  - role: Practicante de ingeniería
     org: Green I&C
     start: 2022-01-03
     end: 2022-03-11
     summary: |
-      + Apoyo y revisión de documentación en proyectos de ingeniería de carácter técnico-ambiental para los sectores
-      minero y energético: cuantificación de huella de carbono, análisis de riesgos, diseño de equipos y simulación de procesos.
+      + Apoyo y revisión de documentación en proyectos de ingeniería de carácter técnico-ambiental para los sectores minero y energético: cuantificación de huella de carbono, análisis de riesgos, diseño de equipos y simulación de procesos.
       + Proyecto de práctica en estudio y análisis de simulaciones hidráulicas de carga y descarga de combustibles.
-      
+
   - role: Practicante de ingeniería
-    org: FPC TISSUE 
+    org: FPC TISSUE
     start: 2020-02-03
     end: 2020-02-28
     summary: |
-      Colaborador en la elaboración de documentos oficiales: "Manual de la Química del Extremo Húmedo".
-      
+      + Colaborador en la elaboración del documento oficial "Manual de la Química del Extremo Húmedo".
+
   - role: Practicante de laboratorio
     org: Energía León
     start: 2019-02-04
     end: 2019-03-01
     summary: |
-      Ayudante de laboratorio para la medición de parámetros y análisis de aguas industriales en planta de energía y calderas.
-
-# skills:
-#   - name: Development
-#     items:
-#       - label: TypeScript
-#         level: 5
-#       - label: React
-#         level: 5
-#       - label: Node.js
-#         level: 5
-#       - label: Python
-#         level: 4
-#   - name: DevOps
-#     items:
-#       - label: Docker
-#         level: 4
-#       - label: AWS
-#         level: 4
-#       - label: CI/CD
-#         level: 5
+      + Ayudante de laboratorio para la medición de parámetros y análisis de aguas industriales en planta de energía y calderas.
 
 languages:
-  - name: English
+  - name: Español
     level: 5
-    label: Native
+    label: Nativo
+  - name: Inglés
+    level: 3
+    label: Intermedio
+
+awards: []
 
 awards: []
