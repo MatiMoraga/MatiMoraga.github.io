@@ -18,6 +18,9 @@ bio: |
 
 links:
   - icon: at-symbol
+    url: mailto:matias.moraga@ug.uchile.cl
+    label: Envíame un correo
+  - icon: at-symbol
     url: mailto:matias.moraga.pendola@gmail.com
     label: Envíame un correo
   - icon: brands/linkedin
