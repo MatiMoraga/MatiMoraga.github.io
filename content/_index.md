@@ -183,7 +183,8 @@ sections:
   #     spacing:
   #       padding: ["4rem", "0", "4rem", "0"]
   
-  # Contact Section
+
+# Contact Section
   - block: contact-info
     id: contact
     content:
@@ -198,14 +199,6 @@ sections:
         - address: matias.moraga@ug.uchile.cl
           label: Universidad de Chile
       autolink: true
-    design:
-      columns: '1'
-      background:
-        color:
-          light: "#ffffff"
-          dark: "#0d0d12"
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
     design:
       columns: '1'
       background:
