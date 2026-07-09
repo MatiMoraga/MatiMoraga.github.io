@@ -86,7 +86,7 @@ sections:
               icon: devicon/matlab
             - name: Python
               icon: devicon/python
-      - name: Softwares
+        - name: Softwares
           items:
             - name: Excel
               icon: custom/excel
