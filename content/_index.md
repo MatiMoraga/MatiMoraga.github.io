@@ -112,7 +112,7 @@ sections:
   - block: resume-experience
     id: experience
     content:
-      title: Experiencia
+      title: "Experiencia"
       date_format: Jan 2006
       items:
         - title: Senior Software Engineer
@@ -187,7 +187,7 @@ sections:
   - block: contact-info
     id: contact
     content:
-      title: Contacto
+      title: "Contacto"
       subtitle: "Trabajemos juntos"
       text: |-
         Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades.
