@@ -1,0 +1,11 @@
+.hb-resume-experience h2 {
+  visibility: hidden;
+  position: relative;
+}
+
+.hb-resume-experience h2::after {
+  content: "Experiencia";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+}
