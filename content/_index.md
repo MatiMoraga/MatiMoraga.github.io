@@ -86,18 +86,18 @@ sections:
               icon: devicon/matlab
             - name: Python
               icon: devicon/python
-        - name: Softwares
+      - name: Softwares
           items:
             - name: Excel
-              icon: devicon/microsoftexcel
+              icon: custom/excel
             - name: PowerBI
-              icon: devicon/microsoftpowerbi
+              icon: custom/powerbi
         - name: Simuladores
           items:
             - name: Aspen Hysys
-              icon: devicon/aspen
+              icon: custom/aspen-hysys
             - name: DWSIM
-              icon: devicon/dwsim
+              icon: custom/dwsim
     design:
       style: grid
       show_levels: false
