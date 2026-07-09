@@ -193,9 +193,9 @@ sections:
       text: |-
         Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades.
         ¡No dudes en escribirme!
-
-        📧 matias.moraga.pendola@gmail.com
-        📧 matias.moraga@ug.uchile.cl
+      email:
+        - address: matias.moraga.pendola@gmail.com
+          label: 'Envíame un correo'
 
     autolink: true
     design:
@@ -207,12 +207,6 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
     
-#      email:
-#        - address: matias.moraga.pendola@gmail.com
-#          label: Gmail
-#        - address: matias.moraga@ug.uchile.cl
-#          label: Universidad de Chile
-
   # CTA Card
   - block: cta-card
     content:
