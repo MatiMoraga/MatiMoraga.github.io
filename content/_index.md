@@ -93,7 +93,7 @@ sections:
             - name: PowerBI
               icon: custom/powerbi
             - name: AutoCAD
-              icon: devicon/autocad
+              icon: custom/autocad
         - name: Simuladores
           items:
             - name: Aspen Hysys
