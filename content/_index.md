@@ -187,13 +187,25 @@ sections:
   - block: contact-info
     id: contact
     content:
-      title: "Contacto"
+      title: Contacto
       subtitle: "Trabajemos juntos"
       text: |-
         Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades.
         ¡No dudes en escribirme!
-      email: matias.moraga.pendola@gmail.com
+      email:
+        - address: matias.moraga.pendola@gmail.com
+          label: Gmail
+        - address: matias.moraga@ug.uchile.cl
+          label: Universidad de Chile
       autolink: true
+    design:
+      columns: '1'
+      background:
+        color:
+          light: "#ffffff"
+          dark: "#0d0d12"
+      spacing:
+        padding: ["4rem", "0", "4rem", "0"]
     design:
       columns: '1'
       background:
