@@ -91,7 +91,7 @@ sections:
             - name: Excel
               icon: devicon/microsoftexcel
             - name: PowerBI
-              icon: devicon/azuredevops
+              icon: devicon/microsoftpowerbi
         - name: Simuladores
           items:
             - name: Aspen Hysys
