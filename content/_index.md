@@ -168,7 +168,7 @@ sections:
       count: 0
       order: desc
     design:
-      view: card
+      view: grid
       columns: '1'
       background:
         color:
