@@ -154,29 +154,6 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
 
-  # Certificaciones
-  - block: collection
-    id: certifications
-    content:
-      title: "Certificaciones"
-      subtitle: "Cursos y certificaciones completados"
-      filters:
-        folders:
-          - blog
-        tags:
-          - Certificación
-      count: 0
-      order: desc
-    design:
-      view: grid
-      columns: '1'
-      background:
-        color:
-          light: "#f5f5f5"
-          dark: "#08080c"
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
-
   # Contact Section
   - block: contact-info
     id: contact
