@@ -155,16 +155,21 @@ sections:
         padding: ["4rem", "0", "4rem", "0"]
 
   # Certificaciones
-  - block: markdown
+  - block: collection
     id: certifications
     content:
       title: "Certificaciones"
       subtitle: "Cursos y certificaciones completados"
-      text: |-
-        | Certificación | Institución | Año | |
-        |---|---|---|---|
-        | Ejemplo | Institución | 2024 | [Abrir](#) |
+      filters:
+        folders:
+          - blog
+        tags:
+          - Certificación
+      count: 0
+      order: desc
     design:
+      view: card
+      columns: '1'
       background:
         color:
           light: "#f5f5f5"
