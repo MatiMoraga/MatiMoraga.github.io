@@ -15,9 +15,9 @@ main:
   # - name: Blog
   #   url: /#blog
   #   weight: 40
-  - name: Certificaciones
-    url: /#certifications
-    weight: 35
+  # - name: Certificaciones
+  #   url: /#certifications
+  #   weight: 35
   - name: Contacto
     url: /#contact
     weight: 40
