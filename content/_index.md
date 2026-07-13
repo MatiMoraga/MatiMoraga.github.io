@@ -172,7 +172,7 @@ sections:
         folders:
           - certifications
     design:
-      columns: 1
+      columns: '1'
       background:
         color:
           light: "#f5f5f5"
