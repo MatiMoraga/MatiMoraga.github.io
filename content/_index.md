@@ -165,14 +165,17 @@ sections:
   - block: markdown
     id: certifications
     content:
-      title: "Certificaciones"
-      subtitle: "Cursos y certificaciones completados"
-      text: |-
-        | Certificación | Institución | Año | Documento |
-        |---|---|---|---|
-        | Python para Data Science | Coursera | 2024 | [Ver PDF](/uploads/certificacion-python.pdf) |
-        | Aspen HYSYS Avanzado | AspenTech | 2023 | [Ver PDF](/uploads/certificacion-hysys.pdf) |
+      title: "Python para Data Science"
+      date: 2024-06-01
+      summary: "Certificación en análisis de datos con Python, pandas y matplotlib"
+      tags:
+        - Python
+        - Data Science
+      institution: "Coursera"
+      featured: true
     design:
+      view: card
+      columns: 1
       background:
         color:
           light: "#f5f5f5"
