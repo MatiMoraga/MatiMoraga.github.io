@@ -161,7 +161,25 @@ sections:
           dark: "#0d0d12"
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
-  
+    
+  - block: markdown
+    id: certifications
+    content:
+      title: "Certificaciones"
+      subtitle: "Cursos y certificaciones completados"
+      text: |-
+        | Certificación | Institución | Año | Documento |
+        |---|---|---|---|
+        | Python para Data Science | Coursera | 2024 | [Ver PDF](/uploads/certificacion-python.pdf) |
+        | Aspen HYSYS Avanzado | AspenTech | 2023 | [Ver PDF](/uploads/certificacion-hysys.pdf) |
+    design:
+      background:
+        color:
+          light: "#f5f5f5"
+          dark: "#08080c"
+      spacing:
+        padding: ["4rem", "0", "4rem", "0"]
+    
   # Recent Blog Posts
   # - block: collection
   #   id: blog
