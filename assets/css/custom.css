@@ -1,0 +1,13 @@
+/* Certificaciones - cards anchas y cortas */
+.card {
+  min-height: unset !important;
+  height: auto !important;
+}
+
+.card .card-body {
+  padding: 0.75rem 1rem !important;
+}
+
+.card img {
+  display: none !important;
+}
