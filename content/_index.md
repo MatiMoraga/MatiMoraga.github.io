@@ -165,14 +165,14 @@ sections:
   - block: markdown
     id: certifications
     content:
-      title: "Python para Data Science"
-      date: 2024-06-01
-      summary: "Certificación en análisis de datos con Python, pandas y matplotlib"
-      tags:
-        - Python
-        - Data Science
-      institution: "Coursera"
-      featured: true
+      title: "Certificaciones"
+      subtitle: "Cursos y certificaciones completados"
+      categories:
+          - title: "Python para Data Science"
+          - date: 2024-06-01
+          - summary: "Certificación en análisis de datos con Python, pandas y matplotlib"
+          - institution: "Coursera"
+          - featured: true
     design:
       view: card
       columns: 1
