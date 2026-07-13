@@ -162,19 +162,16 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
     
-  - block: markdown
+- block: portfolio
     id: certifications
     content:
       title: "Certificaciones"
       subtitle: "Cursos y certificaciones completados"
-      categories:
-          - title: "Python para Data Science"
-          - date: 2024-06-01
-          - summary: "Certificación en análisis de datos con Python, pandas y matplotlib"
-          - institution: "Coursera"
-          - featured: true
+      count: 0
+      filters:
+        folders:
+          - certifications
     design:
-      view: card
       columns: 1
       background:
         color:
