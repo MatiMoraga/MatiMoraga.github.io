@@ -63,6 +63,8 @@ sections:
           tag: Celulosa y papel
         - name: Tratamiento de aguas
           tag: Tratamiento de aguas
+        - name: Alimentos
+          tag: Alimentos
       default_button_index: 0
     design:
       columns: 3
