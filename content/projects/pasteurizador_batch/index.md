@@ -42,10 +42,8 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 - **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido. Se impone 90% de eficiencia térmica. 
 - **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque agitado con _propeller_. 
 - **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponde a:
-    - Calentamiento: $$\begin{aligned}
-\text{Balance agua:} &\quad m_w Cp_w \frac{dT_h}{dt} &= -U (\bar{T}_h - T)\,dA \\
-\text{Balance leche:} &\quad m\, Cp \frac{dT}{dt} &= U A (\bar{T}_{heat} - T) + Po
-\end{aligned}$$
+    - Calentamiento: $$\text{Balance agua:} &\quad m_w Cp_w \frac{dT_h}{dt} &= -U (\bar{T}_h - T)\,dA \\
+\text{Balance leche:} &\quad m\, Cp \frac{dT}{dt} &= U A (\bar{T}_{heat} - T) + Po$$
     - Calentamiento: 
     - Solución: $$ t_{heating} = \frac{UA}{m Cp} \ln \left(\frac{T_{0} - \bar{T}_{heat} - Po/UA}{T_{HTST} - \bar{T}_{heat} - Po/UA}\right) $$
 
