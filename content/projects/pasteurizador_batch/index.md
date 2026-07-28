@@ -1,6 +1,6 @@
 ---
 title: "Pasteurizador batch"
-date: 2026-07-30
+date: 2026-07-28
 summary: "Diseño y simulación de un pasteurizador batch en estanque agitado con chaqueta para productos lácteos"
 tags: 
   - Diseño
@@ -39,7 +39,12 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 
 ## Resolución
 
-- ** ** - 
+- **Definición de criterios de diseño** - Establecer condiciones de operación para el método HTST y búsqueda propiedades termodinámicas para los fluidos dentro del estanque y por la chaqueta intercambiadora. 
+- **Supuestos de geometría del equipo** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cliíndrico estándar de 1.1*volumen de leche con chaqueta soldada a media caña con 15 vueltas del tubo.
+- **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido. Se impone 90% de eficiencia térmica. 
+- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque agitado, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque con propeler. 
+- **Ecuación de diseño y modelamiento** - 
+ 
 ## Desafíos & Soluciones
 
 ### Desafío 1: 
@@ -48,14 +53,14 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 ## Resultados
 
 
-A continuación se presentan diagramas y gráficos con los resultados de la simulación:
+## Mejoras a futuro
+[] Sistema de control de temperatura que varíe apertura de válvula para flujo en chaqueta
 
 
 ## Lecciones aprendidas
 
 1. ** **: 
-2. ** **: mejorar rapidez de convergencia manteniendo resultados parciales en iteraciones proximales.
-
+2. ** **: 
 ---
 
 **Estado del proyecto**: ✅ Completado  
