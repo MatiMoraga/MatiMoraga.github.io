@@ -45,7 +45,9 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 
 $$ m Cp \frac{dT}{dt} = U\cdot A \cdot (\bar{T}_{heat} - T) + Po$$
 
-$$ t_{heating} = \ln(\frac{T_{past} - \bar{T}_{heat} - Po/UA}{T_{0} - \bar{T]_{heat} - Po/UA}) $$
+$$ t_{heating} = \ln(\frac{T_{past} - \bar{T}_{heat} - Po/UA}{T_{0} - \bar{T}_{heat} - Po/UA}) $$
+
+$$ m Cp \frac{dT}{dt} = -U\cdot A \cdot (T - \bar{T}_{cool})$$
 
  
 ## Desafíos & Soluciones
