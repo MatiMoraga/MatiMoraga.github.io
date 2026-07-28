@@ -21,13 +21,11 @@ highlights:
 math: true
 ---
 
-El siguiente problema corresponde al enunciado de un proyecto que preparé para que mis alumnos del curso IQ4313 Operaciones de Transferencia de Calor. Establecí su diseño previo antes de 
+El siguiente problema corresponde al enunciado de un proyecto que preparé para que mis alumnos del curso IQ4313 Operaciones de Transferencia de Calor.
 
 ## Problema
 
-La empresa lechera SitCo produce leche y derivados lácteos. Según los requerimientos normativos del proceso, se debe pasteurizar los lácteos previo a su distribución
-y conversión en otros productos para asegurar la inocuidad de los alimentos. En base a lo anterior, se desea evaluar la pasteurización de un volumen de 500 litros 
-de leche descremada mediante el método HTST por lotes y programar el proceso dentro de la Carta Gantt de operación de la planta.
+La empresa lechera SitCo produce leche y derivados lácteos. Según los requerimientos normativos del proceso, se debe pasteurizar los lácteos previo a su distribución y conversión en otros productos para asegurar la inocuidad de los alimentos. En base a lo anterior, se desea evaluar la pasteurización de un volumen de 500 litros de leche descremada mediante el método HTST por lotes y programar el proceso dentro de la Carta Gantt de operación de la planta.
 
 El pasteurizador corresponde a un estanque agitado de acero inoxidable con geometría canónica, una chaqueta intercambiadora externa y un agitador tipo _propeller_
 que gira a una velocidad tangencial de 300 m/min y entrega una potencia de 200 W. La chaqueta opera a 0,3 MPa y permite la circulación de un flujo de agua saturada 
@@ -42,8 +40,10 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 - **Definición de criterios de diseño** - Establecer condiciones de operación para el método HTST y búsqueda propiedades termodinámicas para los fluidos dentro del estanque y por la chaqueta intercambiadora. 
 - **Supuestos de geometría del equipo** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cliíndrico estándar de 1.1*volumen de leche con chaqueta soldada a media caña con 15 vueltas del tubo.
 - **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido. Se impone 90% de eficiencia térmica. 
-- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque agitado, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque con propeler. 
-- **Ecuación de diseño y modelamiento** - 
+- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque agitado con _propeller_. 
+- **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponde a:
+
+$$ m Cp \frac{dT}{dt} = U\cdot A \cdot T_m + Po$$
  
 ## Desafíos & Soluciones
 
