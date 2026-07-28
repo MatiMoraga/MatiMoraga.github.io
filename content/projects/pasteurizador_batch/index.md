@@ -43,11 +43,11 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 - **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque agitado con _propeller_. 
 - **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponde a:
     - Calentamiento:
-      $$ m_w Cp_w dT_h = -U (T_h - T)\,dA $$
-      $$ m Cp \frac{dT}{dt} = U A (\bar{T}_{h} - T) + Po$$
+      $ m_w Cp_w dT_h = -U (T_h - T) dA $
+      $ m Cp \frac{dT}{dt} = U A (\bar{T}_{h} - T) + Po$
    
-    - Enfriamiento: $$m_r Cp_r dT_c = U (T - T_c) dA$$
-      $$ m Cp \frac{dT}{dt} = -U\cdot A \cdot (T - \bar{T}_{cool})$$
+    - Enfriamiento: $m_r Cp_r dT_c = U (T - T_c) dA$
+      $ m Cp \frac{dT}{dt} = -U\cdot A \cdot (T - \bar{T}_{cool})$
     - Soluciones: $$ t_{heating} = \frac{UA}{m Cp} \ln \left(\frac{T_{0} - \bar{T}_{heat} - Po/UA}{T_{HTST} - \bar{T}_{heat} - Po/UA}\right) $$
 $$ t_{cooling} = \frac{UA}{m Cp} \ln \left(\frac{T_{0} - \bar{T}_{heat}}{T_{HTST} - \bar{T}_{heat}}\right) $$
  
