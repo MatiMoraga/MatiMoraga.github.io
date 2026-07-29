@@ -41,20 +41,20 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
 - **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski con corrección para tubos helicoidales y la correlación del número de potencia para el estanque agitado con _propeller_. 
 - **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponden a:
     - Calentamiento: $$ m_w Cp_w dT_h = -U_h (T_h - T) dA $$
-      $$ m Cp \frac{dT}{dt} = U_h A \Delta T_{ml} + Po$$
+      $$ m Cp \frac{dT}{dt} = \eta U_h A \Delta T_{ml} + Po$$
    
     - Enfriamiento: $$m_r Cp_r dT_c = U_c (T - T_c) dA $$
-      $$ m Cp \frac{dT}{dt} = -U_c A \Delta T_{ml}$$
+      $$ m Cp \frac{dT}{dt} = -\frac{U_c A}{\eta} \Delta T_{ml}$$
 
   La solución al sistema de ecuaciones se describe mediante solución análitica resuelta en hoja de cálculo en Excel y simulación numérica de las EDO's en MATLAB. 
 
 ## Resultados
-Las soluciones para los tiempos de oepración y la temperatura de salida del fluido en la chaqueta son: 
-- Calentamiento: $$ t_{heating} = \frac{m Cp}{m_w Cp_w(1- e^{-\frac{U_h A}{m_wCp_w}})} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
-  $$ T_h,out(t) = T (t) + (T_h - T(t))\cdot e^{-\frac{U_c A}{m_wCp_w}}$$
+Las soluciones para los tiempos de operación y las temperaturas de salida de los fluidos en la chaqueta son: 
+- Calentamiento: $$ t_{heating} = \frac{m Cp}{\eta m_w Cp_w(1- e^{-\frac{U_h A}{m_wCp_w}})} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= \eta m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
+  $$ T_{ho}(t) = T (t) + (T_h - T(t))\cdot e^{-\frac{U_c A}{m_wCp_w}}$$
 - Enfriamiento:
-      $$ t_{cooling} = \frac{m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
-  $$ T_c,out(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
+      $$ t_{cooling} = \frac{\eta m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
+  $$ T_{co}(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
