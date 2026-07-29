@@ -59,13 +59,14 @@ Las soluciones para los tiempos de operación y las temperaturas de salida de lo
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
 ## Mejoras a futuro
-- [ ] Modelamiento de pasteurización con vapor saturado e inetrcambio de calor latente. 
+- [ ] Modelamiento de pasteurización con vapor saturado e intercambio de calor latente. 
 - [ ] Sistema de control de temperatura que varíe apertura de válvula para flujo en chaqueta. 
 
 ## Lecciones aprendidas
 
 1. **Formas de resolución**: Recuerdo que cuando diseñé este ejercicio, encontré una solución analítica aproximada al problema sin incluir la potencia de agitación, no obstante, mis alumnos optaron por la solución numérica para describir la EDO no homogénea. Ahora corregí la expresión, encontrando una expresión más precisa pero más complicada en cuanto a un cálculo de servilleta.
-2. **Simplificaciones razonables**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta.  
+2. **Simplificaciones razonables**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta.
+3. **Limitaciones**: 
 ---
 
 **Estado del proyecto**: ✅ Completado  
