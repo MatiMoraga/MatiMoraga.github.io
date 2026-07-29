@@ -4,6 +4,7 @@ date: 2026-07-28
 summary: "Diseño y simulación de un pasteurizador batch en estanque agitado con chaqueta para productos lácteos"
 tags: 
   - Diseño
+  - Simulación
   - Alimentos
 tech_stack:
   - MATLAB
@@ -46,8 +47,8 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
       $$ m Cp \frac{dT}{dt} = U A \Delta T_{ml} + Po$$
    
     - Enfriamiento: $$m_r Cp_r dT_c = U (T - T_c) dA $$
-      $$ m Cp \frac{dT}{dt} = -U\cdot A \cdot \Delta T_{ml}$$
-    - Soluciones: $$ t_{heating} = \frac{m Cp e^{\frac{UA}{m_wCp_w}}}{m_w Cp_w(\e^{\frac{UA}{m_wCp_w}} -1)} \ln \left(\frac{T_h + Po/K - T_0}{T_h + Po/K - T_{HTST}}\right) $$
+      $$ m Cp \frac{dT}{dt} = -U A \Delta T_{ml}$$
+    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{UA}{m_wCp_w}}}{m_w Cp_w(\e^{\frac{UA}{m_wCp_w}} -1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$
       $$ t_{cooling} = \frac{UA}{m Cp} \ln \left(\frac{T_{0} - \bar{T}_{heat}}{T_{HTST} - \bar{T}_{heat}}\right) $$
  
 ## Desafíos & Soluciones
