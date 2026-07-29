@@ -28,13 +28,9 @@ El siguiente problema corresponde al enunciado de un proyecto que preparé para 
 
 La empresa lechera SitCo produce leche y derivados lácteos. Según los requerimientos normativos del proceso, se debe pasteurizar los lácteos previo a su distribución y conversión en otros productos para asegurar la inocuidad de los alimentos. En base a lo anterior, se desea evaluar la pasteurización de un volumen de 500 litros de leche descremada mediante el método HTST por lotes y programar el proceso dentro de la Carta Gantt de operación de la planta.
 
-El pasteurizador corresponde a un estanque agitado de acero inoxidable con geometría canónica, una chaqueta intercambiadora externa y un agitador tipo _propeller_
-que gira a una velocidad tangencial de 300 m/min y entrega una potencia de 200 W. La chaqueta opera a 0,3 MPa y permite la circulación de un flujo de agua saturada 
-durante la etapa de calentamiento y pasteurización. Luego de estos periodos, el agitador disminuye su velocidad a 60 m/min otorgando una potencia despreciable
-mientras un flujo de refrigerante 134a ingresa a unos -35°C por la misma chaqueta hasta enfriar el líquido a 4°C.
+El pasteurizador corresponde a un estanque agitado de acero inoxidable con una chaqueta intercambiadora externa y un agitador tipo _propeller_que gira a una velocidad tangencial de 300 m/min y entrega una potencia de 200 W. La chaqueta opera a 0,3 MPa y permite la circulación de un flujo de agua saturada durante la etapa de calentamiento y pasteurización. Luego de estos periodos, el agitador disminuye su velocidad a 60 m/min otorgando una potencia despreciable mientras un flujo de refrigerante 134a ingresa a unos -35°C por la misma chaqueta hasta enfriar el líquido a 4°C.
 
-Se les solicita identificar los mecanismos de transferencia presentes, plantear los balances requeridos, calcular el requerimiento de agua caliente y 
-refrigerante 134a, identificar el área de intercambio y reportar el tiempo total de la operaci´on por batch de leche pasteurizada.
+Se les solicita identificar los mecanismos de transferencia presentes, plantear los balances requeridos, calcular el requerimiento de agua caliente y refrigerante 134a, identificar el área de intercambio y reportar el tiempo total de la operación por batch de leche pasteurizada.
 
 ## Resolución
 
@@ -43,13 +39,14 @@ refrigerante 134a, identificar el área de intercambio y reportar el tiempo tota
 - **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido. Se impone 90% de eficiencia térmica. 
 - **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque agitado con _propeller_. 
 - **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponde a:
-    - Calentamiento: $$ m_w Cp_w dT_h = -U (T_h - T) dA $$
-      $$ m Cp \frac{dT}{dt} = U A \Delta T_{ml} + Po$$
+    - Calentamiento: $$ m_w Cp_w dT_h = -U_h (T_h - T) dA $$
+      $$ m Cp \frac{dT}{dt} = U_h A \Delta T_{ml} + Po$$
    
-    - Enfriamiento: $$m_r Cp_r dT_c = U (T - T_c) dA $$
-      $$ m Cp \frac{dT}{dt} = -U A \Delta T_{ml}$$
-    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{UA}{m_wCp_w}}}{m_w Cp_w(\e^{\frac{UA}{m_wCp_w}} -1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$
-      $$ t_{cooling} = \frac{UA}{m Cp} \ln \left(\frac{T_{0} - \bar{T}_{heat}}{T_{HTST} - \bar{T}_{heat}}\right) $$
+    - Enfriamiento: $$m_r Cp_r dT_c = U_c (T - T_c) dA $$
+      $$ m Cp \frac{dT}{dt} = -U_c A \Delta T_{ml}$$
+    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}} -1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$
+      donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w})
+      $$ t_{cooling} = \frac{m Cp \cdot e^{\frac{U_c A}{m_rCp_r}}}{m_r Cp_r(e^{\frac{U_c A}{m_rCp_r}} -1)} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
  
 ## Desafíos & Soluciones
 
