@@ -65,8 +65,7 @@ Los resultados de la simulación temporal de los perfiles de temperatura en MATL
 ## Lecciones aprendidas
 
 1. **Formas de resolución**: Recuerdo que cuando diseñé este ejercicio, encontré una solución analítica aproximada al problema sin incluir la potencia de agitación, no obstante, mis alumnos optaron por la solución numérica para describir la EDO no homogénea. Ahora corregí la expresión, encontrando una expresión más precisa pero más complicada en cuanto a un cálculo de servilleta.
-2. **Simplificaciones razonables**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta.
-3. **Limitaciones**: 
+2. **Simplificaciones razonables y limitaciones**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta. Al mismo tiempo, mis alumnos no veían agitación de estanques hasta el próximo semestre, por lo que decidí entregarles el dato de la potencia mecánica en vez de complicarlos con correlaciones aún no conocidas.
 ---
 
 **Estado del proyecto**: ✅ Completado  
