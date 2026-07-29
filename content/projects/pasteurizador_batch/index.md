@@ -50,10 +50,10 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
 
 ## Resultados
 Las soluciones para los tiempos de oepración y la temperatura de salida del fluido en la chaqueta son: 
-- Calentamiento: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}}-1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
+- Calentamiento: $$ t_{heating} = \frac{m Cp}{m_w Cp_w(1- e^{-\frac{U_h A}{m_wCp_w}})} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
   $$ T_h,out(t) = T (t) + (T_h - T(t))\cdot e^{-\frac{U_c A}{m_wCp_w}}$$
 - Enfriamiento:
-      $$ t_{cooling} = \frac{m Cp \cdot e^{\frac{U_c A}{m_rCp_r}}}{m_r Cp_r(e^{\frac{U_c A}{m_rCp_r}} -1)} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
+      $$ t_{cooling} = \frac{m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
   $$ T_c,out(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
