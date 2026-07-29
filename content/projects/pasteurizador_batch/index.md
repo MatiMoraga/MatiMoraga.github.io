@@ -8,6 +8,7 @@ tags:
   - Alimentos
 tech_stack:
   - MATLAB
+  - Excel
   - Diseño
   - Procesos
   - Alimentos
@@ -26,37 +27,39 @@ El siguiente problema corresponde al enunciado de un proyecto que preparé para 
 
 ## Problema
 
-La empresa lechera SitCo produce leche y derivados lácteos. Según los requerimientos normativos del proceso, se debe pasteurizar los lácteos previo a su distribución y conversión en otros productos para asegurar la inocuidad de los alimentos. En base a lo anterior, se desea evaluar la pasteurización de un volumen de 500 litros de leche descremada mediante el método HTST por lotes y programar el proceso dentro de la Carta Gantt de operación de la planta.
+La empresa lechera _SitCo_ produce leche y derivados lácteos. Según los requerimientos normativos del proceso, se debe pasteurizar los lácteos previo a su distribución y conversión en otros productos para asegurar la inocuidad de los alimentos. En base a lo anterior, se desea evaluar la pasteurización de un volumen de 500 litros de leche descremada mediante el método HTST por lotes y programar el proceso dentro de la Carta Gantt de operación de la planta.
 
-El pasteurizador corresponde a un estanque agitado de acero inoxidable con una chaqueta intercambiadora externa y un agitador tipo _propeller_que gira a una velocidad tangencial de 300 m/min y entrega una potencia de 200 W. La chaqueta opera a 0,3 MPa y permite la circulación de un flujo de agua saturada durante la etapa de calentamiento y pasteurización. Luego de estos periodos, el agitador disminuye su velocidad a 60 m/min otorgando una potencia despreciable mientras un flujo de refrigerante 134a ingresa a unos -35°C por la misma chaqueta hasta enfriar el líquido a 4°C.
+El pasteurizador corresponde a un estanque agitado de acero inoxidable con una chaqueta intercambiadora externa y un agitador tipo _propeller_que gira a una velocidad tangencial de 300 m/min y entrega una potencia de 200 W. La chaqueta opera a 0,3 MPa y permite la circulación de un flujo de agua saturada durante la etapa de calentamiento y pasteurización. Luego de estos periodos, el agitador disminuye su velocidad a 60 m/min otorgando una potencia despreciable mientras un flujo de refrigerante 134a ingresa a unos -30°C por la misma chaqueta hasta enfriar el líquido a 4°C.
 
 Se les solicita identificar los mecanismos de transferencia presentes, plantear los balances requeridos, calcular el requerimiento de agua caliente y refrigerante 134a, identificar el área de intercambio y reportar el tiempo total de la operación por batch de leche pasteurizada.
 
 ## Resolución
 
 - **Definición de criterios de diseño** - Establecer condiciones de operación para el método HTST y búsqueda propiedades termodinámicas para los fluidos dentro del estanque y por la chaqueta intercambiadora. 
-- **Supuestos de geometría del equipo** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cliíndrico estándar de 1.1*volumen de leche con chaqueta soldada a media caña con 15 vueltas del tubo.
-- **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido. Se impone 90% de eficiencia térmica. 
-- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski para el tubo de la chaqueta y ... para el estanque agitado con _propeller_. 
-- **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponde a:
+- **Imposiciones de geometría** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cliíndrico estándar de 1.1*volumen de leche con pared de 5 mm y chaqueta soldada a media caña con 10 vueltas del tubo.
+- **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido, con salidas a temperaturas mínima y máxima de 87°C y 0°C, respectivamente. Se impone 97% de eficiencia térmica. 
+- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski con corrección para tubos helicoidales y la correlación del número de potencia para el estanque agitado con _propeller_. 
+- **Ecuación de diseño y modelamiento** - La ecuación de diseño por periodos corresponden a:
     - Calentamiento: $$ m_w Cp_w dT_h = -U_h (T_h - T) dA $$
       $$ m Cp \frac{dT}{dt} = U_h A \Delta T_{ml} + Po$$
    
     - Enfriamiento: $$m_r Cp_r dT_c = U_c (T - T_c) dA $$
       $$ m Cp \frac{dT}{dt} = -U_c A \Delta T_{ml}$$
-    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}}-1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$ 
-      $$ t_{cooling} = \frac{m Cp \cdot e^{\frac{U_c A}{m_rCp_r}}}{m_r Cp_r(e^{\frac{U_c A}{m_rCp_r}} -1)} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
- 
-## Desafíos & Soluciones
 
-### Desafío 1: 
-**Problema**: 
+  La solución al sistema de ecuaciones se describe mediante solución análitica resuelta en hoja de cálculo en Excel y simulación numérica de las EDO's en MATLAB. 
 
 ## Resultados
+Las soluciones para los tiempos de oepración y la temperatura de salida del fluido en la chaqueta son: 
+- Calentamiento: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}}-1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
+  $$ T_h,out(t) = T (t) + (T_h - T(t))\cdot e^{-\frac{U_c A}{m_wCp_w}}$$
+- Enfriamiento:
+      $$ t_{cooling} = \frac{m Cp \cdot e^{\frac{U_c A}{m_rCp_r}}}{m_r Cp_r(e^{\frac{U_c A}{m_rCp_r}} -1)} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
+  $$ T_c,out(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
+Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
 ## Mejoras a futuro
-[] Sistema de control de temperatura que varíe apertura de válvula para flujo en chaqueta
+[ ] Sistema de control de temperatura que varíe apertura de válvula para flujo en chaqueta
 
 
 ## Lecciones aprendidas
