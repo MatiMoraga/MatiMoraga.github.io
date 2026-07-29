@@ -44,8 +44,7 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
    
     - Enfriamiento: $$m_r Cp_r dT_c = U_c (T - T_c) dA $$
       $$ m Cp \frac{dT}{dt} = -U_c A \Delta T_{ml}$$
-    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}} -1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$
-      donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w})$ 
+    - Soluciones: $$ t_{heating} = \frac{m Cp \cdot e^{\frac{U_h A}{m_wCp_w}}}{m_w Cp_w(e^{\frac{U_h A}{m_wCp_w}}-1)} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w})$ 
       $$ t_{cooling} = \frac{m Cp \cdot e^{\frac{U_c A}{m_rCp_r}}}{m_r Cp_r(e^{\frac{U_c A}{m_rCp_r}} -1)} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
  
 ## Desafíos & Soluciones
