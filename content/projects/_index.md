@@ -7,8 +7,8 @@ type: landing
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Proyectos personales
+      text: Una selección de proyectos en los que he trabajado durante mis años universitarios (tareas, proyectos de cursos y recursos para mis alumnos en ayudantías) y mi carrera profesional. 
       filters:
         folders:
           - projects
