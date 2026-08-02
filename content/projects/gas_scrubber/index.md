@@ -1,5 +1,5 @@
 ---
-title: "Lavado de biogás"
+title: " Gas scrubber"
 date: 2026-08-02
 summary: "Diseño y evaluación de costos de una columna de limpieza de gases para la purificación de biogás desde digestor anaeróbico."
 tags: 
