@@ -56,11 +56,11 @@ Las soluciones para los tiempos de operación y las temperaturas de salida de lo
       $$ t_{cooling} = \frac{\eta m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
   $$ T_{co}(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
-  | Certificación | Institución | Año | |
-        |---|---|---|---|
-        | Python para Data Science | Coursera | 2024 | [Abrir](/uploads/cert-python.pdf) |
-        | Aspen HYSYS Avanzado | AspenTech | 2023 | [Abrir](/uploads/cert-hysys.pdf) |
-        | Otra certificación | Institución | 2022 | [Abrir](/uploads/cert-otra.pdf) |
+  | Certificación | Institución | Año | 
+  |---|---|---|---|
+  | Python para Data Science | Coursera | 2024 | 
+  | Aspen HYSYS Avanzado | AspenTech | 2023 | 
+  | Otra certificación | Institución | 2022 | 
 
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
