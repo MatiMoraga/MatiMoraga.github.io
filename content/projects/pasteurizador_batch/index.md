@@ -49,18 +49,19 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
   La solución al sistema de ecuaciones se describe mediante solución analítica resuelta en hoja de cálculo en Excel y simulación numérica de las EDO's en MATLAB. 
 
 ## Resultados
-Las soluciones para los tiempos de operación y las temperaturas de salida de los fluidos en la chaqueta son: 
+Las soluciones analíticas para los tiempos de operación y las temperaturas de salida de los fluidos en la chaqueta son: 
 - Calentamiento: $$ t_{heating} = \frac{m Cp}{\eta m_w Cp_w(1- e^{-\frac{U_h A}{m_wCp_w}})} \ln \left(\frac{T_h + \tfrac{Po}{K} - T_0}{T_h + \tfrac{Po}{K} - T_{HTST}}\right) $$ donde $K= \eta m_wCp_w (1 - e^{-\frac{U_h A}{m_wCp_w}})$
   $$ T_{ho}(t) = T (t) + (T_h - T(t))\cdot e^{-\frac{U_h A}{m_wCp_w}}$$
 - Enfriamiento:
       $$ t_{cooling} = \frac{\eta m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
   $$ T_{co}(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
-  | Certificación | Institución | Año | 
-  |---|---|---|---|
-  | Python para Data Science | Coursera | 2024 | 
-  | Aspen HYSYS Avanzado | AspenTech | 2023 | 
-  | Otra certificación | Institución | 2022 | 
+Los resultados para los tiempos de operación para cada periodo calculados en Excel (analítica) y MATLAB (numérica) son: 
+  | Tiempos de operación | Excel | MATLAB | 
+  |---|---|---|
+  | Calentamiento |  |  | 
+  | Enfriamiento |  |  | 
+  
 
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
