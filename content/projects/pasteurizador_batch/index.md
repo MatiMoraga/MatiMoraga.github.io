@@ -62,8 +62,8 @@ Los resultados para los tiempos de operación para cada periodo calculados en Ex
   | Calentamiento |  |  | 
   | Enfriamiento |  |  | 
   
-
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
+![Perfil de temperatura de estanque y chaqueta en el tiempo](./perfilTemperatura.png)
 
 ## Mejoras a futuro
 - [ ] Modelamiento de pasteurización con vapor saturado e intercambio de calor latente. 
