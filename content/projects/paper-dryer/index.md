@@ -1,6 +1,6 @@
 ---
 title: "Secador de papel"
-date: 2026-07-07
+date: 2026-08-02
 summary: "Diseño y optimización de costos de un secador de papel cilíndrico tipo Yankee utilizado en máquina papelera tissue."
 tags: 
   - Diseño
