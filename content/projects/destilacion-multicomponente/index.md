@@ -80,7 +80,7 @@ A continuación se presentan diagramas y gráficos con los resultados de la simu
 
 - [ ] Balances de energía por etapas.
 - [ ] Diseño estructural de la columna.
-- [ ] Validanción con simualdor de procesos. 
+- [ ] Validación con simualdor de procesos. 
 
 ## Lecciones aprendidas
 
