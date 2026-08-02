@@ -59,8 +59,8 @@ Las soluciones analíticas para los tiempos de operación y las temperaturas de 
 Los resultados para los tiempos de operación para cada periodo calculados en Excel (analítica) y MATLAB (numérica) son: 
   | Tiempos de operación | Excel | MATLAB | 
   |---|---|---|
-  | Calentamiento |  |  | 
-  | Enfriamiento |  |  | 
+  | Calentamiento | 772,4 s | 773 s | 
+  | Enfriamiento | 2448,6 s | 2451 s | 
   
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 ![Perfil de temperatura de estanque y chaqueta en el tiempo](./perfilTemperatura.jpg)
