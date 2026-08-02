@@ -46,7 +46,7 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
     - Enfriamiento: $$m_r Cp_r dT_c = U_c (T - T_c) dA $$
       $$ m Cp \frac{dT}{dt} = -\frac{U_c A}{\eta} \Delta T_{ml}$$
 
-  La solución al sistema de ecuaciones se describe mediante solución analítica resuelta en hoja de cálculo en Excel y simulación numérica de las EDO's en MATLAB. 
+  La solución al sistema de ecuaciones se describe mediante solución analítica resuelta en hoja de cálculo en Excel y simulación numérica de las EDOs en MATLAB. 
 
 ## Resultados
 Las soluciones analíticas para los tiempos de operación y las temperaturas de salida de los fluidos en la chaqueta son: 
