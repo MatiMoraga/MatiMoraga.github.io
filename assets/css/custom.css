@@ -11,3 +11,12 @@
 .card img {
   display: none !important;
 }
+
+/* Mostrar todos los tags en las tarjetas */
+.hb-tag-overflow {
+  display: none !important;
+}
+
+.hb-tags .hb-tag:nth-child(n+5) {
+  display: inline-flex !important;
+}
