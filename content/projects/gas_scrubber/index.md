@@ -17,11 +17,11 @@ role: "Desarrollador"
 duration: "1 semana"
 team_size: 1
 highlights:
-  - "Métodos shortcut (FUGK) y riguroso MESH implementados"
+  - " Implementación de macros para evaluación de alternativas de diseño"
 math: true
 ---
 
-Se elige el siguiente problema de modelamiento para resolver en Python.
+Realicé el diseño del siguiente equipo para un proyecto universitario de tratamiento de RILES en el contexto del curso de Biotecnología Ambiental. Diseñé en base a una composición de líquido de lavado, por lo que a continuación quise mejorar la elección del diseño del equipo en base a una evaluación económica de las alternativas de solvente. 
 
 ## Problema
 
