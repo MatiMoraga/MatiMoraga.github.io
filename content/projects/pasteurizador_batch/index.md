@@ -39,7 +39,7 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
 - **Imposiciones de geometría** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cilíndrico estándar de 1.1*volumen de leche con pared de 5 mm y chaqueta soldada a media caña con 10 vueltas del tubo.
 - **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido, con salidas a temperaturas promedio de 87°C y 0°C, respectivamente. Se impone 97% de eficiencia térmica. 
 - **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski con corrección para tubos helicoidales por Manlapaz-Churchill y la correlación para el estanque agitado con _propeller_ de Chilton-Drew-Jebens. 
-- **Ecuación de diseño y modelamiento** - Las ecuaciones de diseño para el modelamiento por periodos corresponden a:
+- **Ecuación de diseño y modelamiento** - Las ecuaciones que describen la transferencia de calor por periodos corresponden a:
     - Calentamiento: $$ m_w Cp_w dT_h = -U_h (T_h - T) dA $$
       $$ m Cp \frac{dT}{dt} = \eta U_h A \Delta T_{ml} + Po$$
    
