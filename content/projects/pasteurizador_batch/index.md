@@ -56,6 +56,12 @@ Las soluciones para los tiempos de operación y las temperaturas de salida de lo
       $$ t_{cooling} = \frac{\eta m Cp}{m_r Cp_r(1-e^{-\frac{U_c A}{m_rCp_r}})} \ln \left(\frac{T_{HTST} - T_c}{T_0 - T_c}\right) $$
   $$ T_{co}(t) = T (t) - (T(t)- T_c)\cdot e^{-\frac{U_c A}{m_cCp_c}}$$
 
+  | Certificación | Institución | Año | |
+        |---|---|---|---|
+        | Python para Data Science | Coursera | 2024 | [Abrir](/uploads/cert-python.pdf) |
+        | Aspen HYSYS Avanzado | AspenTech | 2023 | [Abrir](/uploads/cert-hysys.pdf) |
+        | Otra certificación | Institución | 2022 | [Abrir](/uploads/cert-otra.pdf) |
+
 Los resultados de la simulación temporal de los perfiles de temperatura en MATLAB se visualizan en el siguiente gráfico:
 
 ## Mejoras a futuro
@@ -65,7 +71,7 @@ Los resultados de la simulación temporal de los perfiles de temperatura en MATL
 ## Lecciones aprendidas
 
 1. **Formas de resolución**: Recuerdo que cuando diseñé este ejercicio, encontré una solución analítica aproximada al problema sin incluir la potencia de agitación, no obstante, mis alumnos optaron por la solución numérica para describir la EDO no homogénea. Ahora corregí la expresión, encontrando una expresión más precisa pero más complicada en cuanto a un cálculo de servilleta.
-2. **Simplificaciones razonables y limitaciones**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta. Al mismo tiempo, mis alumnos no veían agitación de estanques hasta el próximo semestre, por lo que decidí entregarles el dato de la potencia mecánica en vez de complicarlos con correlaciones aún no conocidas.
+2. **Simplificaciones razonables y limitaciones**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta. Al mismo tiempo, mis alumnos no veían agitación de estanques hasta el próximo semestre, por lo que decidí entregarles el dato de la potencia mecánica en vez de complicarlos con correlaciones aún desconocidas.
 ---
 
 **Estado del proyecto**: ✅ Completado  
