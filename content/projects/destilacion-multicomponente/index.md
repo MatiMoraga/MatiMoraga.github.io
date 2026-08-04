@@ -46,7 +46,7 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 
 ## Arquitectura
 ---
-
+![Diagrama de flujo de decisiones](diseno_columna_resumido.svg)
 ---
 ## Desafíos & Soluciones
 
