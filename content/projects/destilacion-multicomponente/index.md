@@ -45,9 +45,8 @@ Una corriente de líquido y vapor saturados (q = 0.30) a una presión de 405.4 K
 - **Problema de optimización** - Minimización de la suma de los errores cuadráticos entre las recuperaciones deseadas y reales, variando flujo de destilado y razón de reflujo. Para cada iteración del optimizador, se actualiza el gradiente de temperaturas iterativamente en un _inner-loop_.
 
 ## Arquitectura
----
 ![Diagrama de flujo de decisiones](diseno_columna_resumido.svg)
----
+
 ## Desafíos & Soluciones
 
 ### Desafío 1: Restricciones lógicas a variables internas
