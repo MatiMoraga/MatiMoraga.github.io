@@ -35,10 +35,10 @@ Se les solicita identificar los mecanismos de transferencia presentes, plantear 
 
 ## Resolución
 
-- **Definición de criterios de diseño** - Establecer condiciones de operación para el método HTST y búsqueda propiedades termodinámicas para los fluidos dentro del estanque y por la chaqueta intercambiadora. 
-- **Imposiciones de geometría** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cilíndrico estándar de 1.1*volumen de leche con pared de 5 mm y chaqueta soldada a media caña con 10 vueltas del tubo.
+- **Definición de criterios de diseño** - Establecer condiciones de operación para el método HTST [^1] y búsqueda propiedades termodinámicas para los fluidos dentro del estanque y por la chaqueta intercambiadora [^2]. 
+- **Imposiciones de geometría** - Imponer diseño geométrico del estanque en base a requerimiento del volumen. Se decide modelar un estanque cilíndrico estándar de 1.1*volumen de leche con pared de 5 mm y chaqueta soldada a media caña con 10 vueltas del tubo [^3].
 - **Balances de energía por etapas** - Se calcula el requerimiento másico de agua caliente y refrigerante en base a calor requerido, con salidas a temperaturas promedio de 87°C y 0°C, respectivamente. Se impone 97% de eficiencia térmica. 
-- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski con corrección para tubos helicoidales por Manlapaz-Churchill y la correlación para el estanque agitado con _propeller_ de Chilton-Drew-Jebens. 
+- **Coeficiente de transferencia y correlaciones** - Se modela resistencia total considerando convección interna en el estanque, conducción de la pared del estanque y convección interna por el tubo helicoidal de la chaqueta. Se utiliza la correlación Gnielinski con corrección para tubos helicoidales por Manlapaz-Churchill y la correlación para el estanque agitado con _propeller_ de Chilton-Drew-Jebens [^4]. 
 - **Ecuación de diseño y modelamiento** - Las ecuaciones que describen la transferencia de calor por periodos corresponden a:
     - Calentamiento: $$ m_w Cp_w dT_h = -U_h (T_h - T) dA $$
       $$ m Cp \frac{dT}{dt} = \eta U_h A \Delta T_{ml} + Po$$
@@ -75,10 +75,10 @@ Los resultados de la simulación temporal de los perfiles de temperatura en MATL
 2. **Simplificaciones razonables y limitaciones**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta. Al mismo tiempo, mis alumnos no veían agitación de estanques hasta el próximo semestre, por lo que decidí entregarles el dato de la potencia mecánica en vez de complicarlos con correlaciones aún desconocidas.
 ---
 ## Referencias
-1. Government of Canada. (n.d.). High temperature short time (HTST) pasteurization. Canadian Food Inspection Agency. [https://inspection.canada.ca/en/preventive-controls/dairy-products/htst](https://inspection.canada.ca/en/preventive-controls/dairy-products/htst)
-2. Cengel, Y. A., & Ghajar, A. J. (2020). Transferencia de calor y masa: Fundamentos y aplicaciones (5.ª ed.). McGraw-Hill.
-3. Cabassud, M., Le Lann, M.-V., Ettedgui, B., & Casamatta, G. (1994). A general simulation model of batch chemical reactors for thermal control investigations. Chemical Engineering & Technology, 17(4), 255–268. [https://doi.org/10.1002/ceat.270170406](https://doi.org/10.1002/ceat.270170406)
-4. Dhotre, A. V. (2014). Milk pasteurization and equipment. In P. K. Mandal & A. K. Biswas (Eds.), Animal products technology (1st ed., pp. 51–78). Studium Press (India).
+[^1] Government of Canada. (n.d.). High temperature short time (HTST) pasteurization. Canadian Food Inspection Agency. [https://inspection.canada.ca/en/preventive-controls/dairy-products/htst](https://inspection.canada.ca/en/preventive-controls/dairy-products/htst)
+[^2] Cengel, Y. A., & Ghajar, A. J. (2020). Transferencia de calor y masa: Fundamentos y aplicaciones (5.ª ed.). McGraw-Hill.
+[^3] Cabassud, M., Le Lann, M.-V., Ettedgui, B., & Casamatta, G. (1994). A general simulation model of batch chemical reactors for thermal control investigations. Chemical Engineering & Technology, 17(4), 255–268. [https://doi.org/10.1002/ceat.270170406](https://doi.org/10.1002/ceat.270170406)
+[^4] Dhotre, A. V. (2014). Milk pasteurization and equipment. In P. K. Mandal & A. K. Biswas (Eds.), Animal products technology (1st ed., pp. 51–78). Studium Press (India).
 ---
 
 **Estado del proyecto**: ✅ Completado  
