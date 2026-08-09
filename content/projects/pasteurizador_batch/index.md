@@ -71,8 +71,14 @@ Los resultados de la simulación temporal de los perfiles de temperatura en MATL
 
 ## Lecciones aprendidas
 
-1. **Formas de resolución**: Recuerdo que cuando diseñé este ejercicio, encontré una solución analítica aproximada al problema sin incluir la potencia de agitación, no obstante, mis alumnos optaron por la solución numérica para describir la EDO no homogénea. Ahora corregí la expresión, encontrando una expresión más precisa pero más complicada en cuanto a un cálculo de servilleta.
+1. **Formas de resolución**: Recuerdo que cuando diseñé este ejercicio, encontré una solución analítica aproximada al problema sin incluir la potencia de agitación, no obstante, mis alumnos optaron por la solución numérica para describir la EDO no homogénea. Ahora corregí la ecuación, encontrando una expresión más precisa pero más complicada en cuanto a un cálculo de servilleta.
 2. **Simplificaciones razonables y limitaciones**: Mis alumnos de cuarto año decidieron simplificar el modelo considerando una temperatura promedio aritmética asumiendo una temperatura promedio constante en el líquido de la chaqueta. Considerando que es su primer curso con diseño de equipos en estado estacionario y no tienen nociones de dinámica de procesos, me pareció un supuesto razonable para abordar la variación de la temperatura en la chaqueta. Al mismo tiempo, mis alumnos no veían agitación de estanques hasta el próximo semestre, por lo que decidí entregarles el dato de la potencia mecánica en vez de complicarlos con correlaciones aún desconocidas.
+---
+## Referencias
+1. Government of Canada. (n.d.). High temperature short time (HTST) pasteurization. Canadian Food Inspection Agency. [https://inspection.canada.ca/en/preventive-controls/dairy-products/htst](https://inspection.canada.ca/en/preventive-controls/dairy-products/htst)
+2. Cengel, Y. A., & Ghajar, A. J. (2020). Transferencia de calor y masa: Fundamentos y aplicaciones (5.ª ed.). McGraw-Hill.
+3. Cabassud, M., Le Lann, M.-V., Ettedgui, B., & Casamatta, G. (1994). A general simulation model of batch chemical reactors for thermal control investigations. Chemical Engineering & Technology, 17(4), 255–268. [https://doi.org/10.1002/ceat.270170406](https://doi.org/10.1002/ceat.270170406)
+4. Dhotre, A. V. (2014). Milk pasteurization and equipment. In P. K. Mandal & A. K. Biswas (Eds.), Animal products technology (1st ed., pp. 51–78). Studium Press (India).
 ---
 
 **Estado del proyecto**: ✅ Completado  
