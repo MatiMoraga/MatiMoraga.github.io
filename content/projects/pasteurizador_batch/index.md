@@ -78,6 +78,7 @@ Los resultados de la simulación temporal de los perfiles de temperatura en MATL
 **GitHub**: [Código Fuente](https://drive.google.com/drive/folders/1WJAJW4VDDPhYVK5Z3TWPoqSQbkA4Wig7?usp=sharing)
 
 ## Referencias
+
 [^1]: Government of Canada. (n.d.). High temperature short time (HTST) pasteurization. Canadian Food Inspection Agency. [https://inspection.canada.ca/en/preventive-controls/dairy-products/htst](https://inspection.canada.ca/en/preventive-controls/dairy-products/htst)
 [^2]: Cengel, Y. A., & Ghajar, A. J. (2020). Transferencia de calor y masa: Fundamentos y aplicaciones (5.ª ed.). McGraw-Hill.
 [^3]: Cabassud, M., Le Lann, M.-V., Ettedgui, B., & Casamatta, G. (1994). A general simulation model of batch chemical reactors for thermal control investigations. Chemical Engineering & Technology, 17(4), 255–268. [https://doi.org/10.1002/ceat.270170406](https://doi.org/10.1002/ceat.270170406)
